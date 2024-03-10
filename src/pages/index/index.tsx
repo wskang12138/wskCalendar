@@ -1,5 +1,5 @@
 import { View } from "@tarojs/components";
-import Taro, { useDidShow, useLoad } from "@tarojs/taro";
+import { useDidShow } from "@tarojs/taro";
 import "./index.scss";
 
 export default function Index() {

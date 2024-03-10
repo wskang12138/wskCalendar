@@ -1,6 +1,6 @@
 import { View, Text, Button } from "@tarojs/components";
 import Taro, { useDidShow, useLoad, useReady } from "@tarojs/taro";
-import React, { useEffect, useState } from "react";
+import {  useState } from "react";
 import "./index.scss";
 
 export default function Index() {

@@ -7,12 +7,8 @@ const UNAUTHORIZATION_CODE = 401;
 
 export const BASE_URL = () =>
   process.env.NODE_ENV == "development"
-    ? `http://test.snap-gateway.ruigushop.com`
-    : process.env.NODE_ENV == "test"
-    ? `http://test.snap-gateway.ruigushop.com`
-    : "https://rbox.ruigushop.com";
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMDA1MiwidXNlcl9uYW1lIjoi6JKL5aqb5aqbIiwic2NvcGUiOlsic2VydmVyIl0sIm5pY2tuYW1lIjoi6JKL5aqb5aqbIiwiZXhwIjoyMTMxODUyNjI2LCJqdGkiOiI1MGNkMDk3YS0yZjYyLTRiZWMtYTFkNi0xZjM2NmQxNzZmYWIiLCJjbGllbnRfaWQiOiJzZGJka2oxamIyYmhzIn0.JT_lEjIhjR9btyV2FbUJo0srnmhvVVGam5Y1-pfJoyY";
+    ? ``:''
+const token = ''
 const interceptorInitRequest = (chain) => {
   // console.log("chain-----", chain);
   chain.requestParams.url = `${BASE_URL()}${chain.requestParams.url}`;

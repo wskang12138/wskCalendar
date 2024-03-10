@@ -33,7 +33,7 @@ export default [
     output: [
       {
         format: 'esm',
-        dir: './dist/lancooUI-Mobile',
+        dir: './dist/wskCalendar',
         exports: 'named', // 指定导出模式（自动、默认、命名、无）
         preserveModules: true, // 保留模块结构
         preserveModulesRoot: 'src', // 将保留的模块放在根级别的此路径下
@@ -94,7 +94,7 @@ export default [
       //         './src/components/**/*.css',
       //         './src/images/**/*'
       //       ],
-      //       dest: './dist/lancooUI-Mobile/style/',
+      //       dest: './dist/wskCan/style/',
       //       rename: (_, __, fullPath) =>
       //         `${fullPath.includes('src/components') ?
       //           fullPath.replace('src/components', '') :
@@ -162,7 +162,7 @@ export default [
     output: [
       {
         format: 'esm',
-        dir: './dist/lancooUI-Mobile',
+        dir: './dist/wskCalendar',
         exports: 'named', // 指定导出模式（自动、默认、命名、无）
         preserveModules: true, // 保留模块结构
         preserveModulesRoot: 'src', // 将保留的模块放在根级别的此路径下
