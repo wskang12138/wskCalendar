@@ -1,12 +1,10 @@
-import fs from "fs";
-import path from "path";
-import chalk from "chalk";
-import { fileURLToPath } from "url";
-const __filenameNew = fileURLToPath(import.meta.url);
 
-const __dirnameNew = path.dirname(__filenameNew);
-let rootPath = `${__dirnameNew}\\package.json`;
-let filePath = `${__dirnameNew}\\dist\\wskCalendar\\package.json`;
+const fs = require('fs')
+const path = require('path')
+const chalk = require('chalk')
+const __dirnameNew = __dirname;
+let rootPath = path.join(__dirnameNew, 'package.json');
+let filePath = path.join(__dirnameNew, 'dist', 'wskCalendar', 'package.json');
 // 创建持久化编译时间
 const createPersistentCompilationTime = () => {
   // 1.判断是否存在文件

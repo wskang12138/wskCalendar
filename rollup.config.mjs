@@ -10,7 +10,7 @@ import RollupPostCss from 'rollup-plugin-postcss'
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import RollPostcssInject2Css from './copy-rollup-postcss-inject-to-css.js';
+import RollPostcssInject2Css from './copy-rollup-postcss-inject-to-css.mjs';
 // import pxtransform from 'postcss-pxtransform';
 // import Uglifyjs from 'uglify-js';
 // import { terser } from 'rollup-plugin-terser'
@@ -20,7 +20,6 @@ import RollPostcssInject2Css from './copy-rollup-postcss-inject-to-css.js';
 // import postImport from 'postcss-import';
 // import postPxToVw from 'postcss-px-to-viewport';
 // import RollupCopy from 'rollup-plugin-copy'
-
 
 const externalPackages = [
   /node_modules/
