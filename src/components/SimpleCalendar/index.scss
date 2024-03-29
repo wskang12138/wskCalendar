@@ -4,7 +4,6 @@ $classNamePrefix: 'simple-calendar';
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-
 }
 
 .#{$classNamePrefix}-month {
@@ -38,7 +37,7 @@ $classNamePrefix: 'simple-calendar';
     display: flex;
     border-bottom: 1px solid #e5e5e5;
   }
-  
+
   &-week {
     margin-top: 8px;
   }

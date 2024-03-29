@@ -4,21 +4,8 @@ import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
 import { transformToRemOrRpx } from "../../utils";
 import "./index.scss"
+import { CalendarProps, CalendarState, DayType } from "./types";
 
-export interface CalendarProps {
-  selectedDay?: string
-  onChange?: (selectedDay: string) => void
-  onShowCalendar?: () => void
-  onCloseCalendar?: () => void
-  minDay?: string
-  maxDay?: string
-}
-
-type DayType = {
-  week: string,
-  date: string,
-  dayjs: dayjs.Dayjs
-}
 
 function newDayType(dayjs: dayjs.Dayjs): DayType {
   return {
@@ -28,24 +15,14 @@ function newDayType(dayjs: dayjs.Dayjs): DayType {
   }
 }
 
-interface CalendarState {
-  scrollLeft: number
-  dayArr: Array<DayType>
-  isOpenCalendar: boolean
-  currentIndex: number
-  transition: string
-}
 
 const weekDay = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"]
 
 let CalendarCId = 0
-
 const INIT_DAY_HEAD = 10
 const INIT_DAY_TAIL = 10
-
 const LOAD_THRESHOLD = 7
 const LOAD_DAY = 8
-
 
 export class SwipeCalendar extends Component<CalendarProps, CalendarState> {
 
@@ -70,7 +47,7 @@ export class SwipeCalendar extends Component<CalendarProps, CalendarState> {
     this.touchStartX = 0
     this.isLoadingHead = false
     this.isLoadingTail = false
-    this.id = `calendar-c-${CalendarCId++}`
+    this.id = `swipe-calendar-${CalendarCId++}`
     this.onTouchStart = this.onTouchStart.bind(this)
     this.onTouchMove = this.onTouchMove.bind(this)
     this.onTouchEnd = this.onTouchEnd.bind(this)
@@ -245,7 +222,7 @@ export class SwipeCalendar extends Component<CalendarProps, CalendarState> {
   componentDidMount() {
     setTimeout(() => {
       Taro.createSelectorQuery()
-        .select(`#${this.id} .calendar-c-day-wrapper`)
+        .select(`#${this.id} .swipe-calendar-day-wrapper`)
         .boundingClientRect((res:any)=> {
           this.dayWrapperWidth = res.width
           this.setState({
@@ -384,11 +361,11 @@ export class SwipeCalendar extends Component<CalendarProps, CalendarState> {
     const translateX = transformToRemOrRpx(this.state.scrollLeft)
     return (
       <View id={this.id} className="calendar">
-        <View className="calendar-c-day">
+        <View className="swipe-calendar-day">
           <View onTouchStart={this.onTouchStart}
             onTouchMove={this.onTouchMove}
             onTouchEnd={this.onTouchEnd}
-            className="calendar-c-day-panel"
+            className="swipe-calendar-day-panel"
             style={{ transform: `translateX(-${translateX})`, transition: this.state.transition }}>
             {
               this.state.dayArr.map((item, index) => (
@@ -414,9 +391,9 @@ interface DayRender extends DayType {
 const DayRender = memo((props: DayRender) => {
   return (
     <View onClick={() => props.onClick(props.dayjs)}
-      className={`calendar-c-day-wrapper ${props.isSelected ? "selected" : ""}`}>
-      <View className="calendar-c-day-week">{props.week}</View>
-      <View className="calendar-c-date">{props.date === '今天' ? props.date : props?.dayjs?.format('MM-DD')}</View>
+      className={`swipe-calendar-day-wrapper ${props.isSelected ? "selected" : ""}`}>
+      <View className="swipe-calendar-day-week">{props.week}</View>
+      <View className="swipe-calendar-date">{props.date === '今天' ? props.date : props?.dayjs?.format('MM-DD')}</View>
     </View>
   )
 })

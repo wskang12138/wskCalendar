@@ -2,14 +2,11 @@
   width: 100%;
   height: 118px;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
   background: linear-gradient(90deg, #00d0ff 0%, #0074ff 100%);
-
 }
 
-.calendar-c-day {
+.swipe-calendar-day {
   height: 100%;
   width: 660px;
   position: relative;
@@ -27,7 +24,7 @@
   }
 }
 
-.calendar-c-icon {
+.swipe-calendar-icon {
   position: relative;
   right: 5px;
   height: 100%;
@@ -55,13 +52,13 @@
   }
 }
 
-.calendar-c-day-panel {
+.swipe-calendar-day-panel {
   position: absolute;
   left: 0;
   width: fit-content;
 }
 
-.calendar-c-day-wrapper {
+.swipe-calendar-day-wrapper {
   width: 110px;
   height: 90px;
   display: flex;
@@ -75,16 +72,16 @@
     border-radius: 4px;
 	  opacity: 1;
     border-radius: 2;
-    .calendar-c-day-week {
+    .swipe-calendar-day-week {
        opacity: 1;
     }
 
-    .calendar-c-date {
+    .swipe-calendar-date {
        opacity: 1;
     }
   }
 
-  .calendar-c-day-week {
+  .swipe-calendar-day-week {
     text-align: center;
     padding-top: 19px;
     font-size: 20px;
@@ -94,7 +91,7 @@
     opacity: 0.8;
   }
 
-  .calendar-c-date {
+  .swipe-calendar-date {
     text-align: center;
     margin-top: 15px;
     font-size: 24px;
