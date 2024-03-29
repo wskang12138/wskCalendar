@@ -3,8 +3,8 @@ import { View } from "@tarojs/components";
 import dayjs from "dayjs";
 import { FC, useMemo } from "react";
 import "./index.scss";
-import { DayItemApi, getMonthInfo, getRecentMonth } from "./utils";
 import { createClassName } from "@/utils";
+import { getRecentMonth ,DayItemApi, getMonthInfo,} from "@/utils/calendar";
 
 interface PropsType {
   startDate?: string;
@@ -13,18 +13,18 @@ interface PropsType {
   data?: string[];
 }
 interface MonthPropsType extends PropsType {
-  month: string;
+  month:string;
 }
 
 const { rootClassNames, classNames } = createClassName("simple-calendar");
+
 const MonthItem: FC<MonthPropsType> = (props) => {
   const { month, startDate, disableDate, onDayClick, data = [] } = props;
-
   const weekdayHeader = ["一", "二", "三", "四", "五", "六", "日"];
   const monthInfo = useMemo(() => {
     return getMonthInfo(month);
   }, [month]);
-
+  console.log(month,66666666)
   // 点击day
   const handleDayClick = (day: DayItemApi) => {
     if(!isValidDay(day)) return
@@ -40,7 +40,7 @@ const MonthItem: FC<MonthPropsType> = (props) => {
     return true;
   };
 
-  // class 
+  // class
   const getDayClass = (day: DayItemApi) => {
     const isValid = isValidDay(day)
     const isActive = !!(isValid && data?.length && data.find(i => i===day.date))
@@ -83,7 +83,7 @@ const MonthItem: FC<MonthPropsType> = (props) => {
   );
 };
 
-const SimpleCalendar: FC<PropsType> = (props) => {
+export const SimpleCalendar: FC<PropsType> = (props) => {
   /* 属性 */
   const { startDate, disableDate, onDayClick, data } = props;
 
@@ -94,7 +94,7 @@ const SimpleCalendar: FC<PropsType> = (props) => {
     <View className={rootClassNames("")}>
       {getRecentMonth(3).map((m) => (
         <MonthItem
-          month={m}
+          month={m.month}
           startDate={startDate}
           disableDate={disableDate}
           onDayClick={onDayClick}
@@ -105,4 +105,3 @@ const SimpleCalendar: FC<PropsType> = (props) => {
   );
 };
 
-export default SimpleCalendar;

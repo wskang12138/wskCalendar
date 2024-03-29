@@ -1,9 +1,10 @@
 export default defineAppConfig({
   pages: [
     "pages/index/index",
-    "pages/calendar/index",
+    "pages/popCalendar/index",
     "pages/swipeCalendar/index",
-    "pages/weekCalendar/index"
+    "pages/weekCalendar/index",
+    "pages/simpleCalendar/index",
   ],
   window: {
     backgroundTextStyle: "light",

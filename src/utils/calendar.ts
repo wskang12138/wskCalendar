@@ -11,10 +11,10 @@ export interface DayItemApi {
 export const DateFormatStr = "YYYY-MM-DD";
 /**
  * 获取月份信息
- * @param month 
+ * @param month
  * @returns month各周次信息
  */
-export const getMonthInfo = (month: string) => {
+export const getMonthInfo = (month: string | number) => {
   const currentDay = dayjs().format(DateFormatStr);
   const date = dayjs(month);
 
@@ -68,6 +68,7 @@ export interface MonthsApi {
   month: string;
   isCurrent?: boolean;
 }
+
 export const getRecentMonth = (recent: number = 5, initMonth?: string) => {
   const months: MonthsApi[] = [];
   let month = initMonth ? dayjs(initMonth) : dayjs();
@@ -124,7 +125,7 @@ export const addMonthByMonths = (
     }
     if (months.length > maxNum) months = months.slice(months.length - maxNum);
   }
-  
+
   return { list: months };
 };
 

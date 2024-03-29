@@ -45,15 +45,6 @@ export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> 
         this.id = `lg-calendar-d-${lgCalendarDId++}`
     }
 
-    // UNSAFE_componentWillReceiveProps(){
-    //     this.setState({})
-    // }
-
-    // shouldComponentUpdate(nextProps: LgCalendarDProps){
-    //     return true
-    // }
-
-
     reCreateMonths(centerDay?: string) {
         const months = new Array<{ year: number, month: number }>()
         let centerMonth = dayjs().startOf("month")

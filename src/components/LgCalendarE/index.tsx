@@ -57,8 +57,7 @@ export function LgCalendarE(props: CalendarEProps) {
     }
   }
   return (
-    <ScrollView scrollIntoView={scrollIntoView} scrollX={true}
-                className={props.className ? "lg-calendar-e " + props.className : "lg-calendar-e"}>
+    <ScrollView scrollIntoView={scrollIntoView} scrollX={true}  className={props.className ? "lg-calendar-e " + props.className : "lg-calendar-e"}>
       {
         datas.map((item, index) =>
           <View onClick={() => onClick(item)} key={`${index}-${item.date}`} id={item.isSelected ? "selected-view-item" : `${index}-${item.date}`}
