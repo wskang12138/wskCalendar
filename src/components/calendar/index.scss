@@ -1,0 +1,99 @@
+$classPrex: 'calendar-pop';
+.container_LayerOut_choiceBox_open_bottom {
+  padding-top: 0;
+  .container_LayerOut_content_title {
+    display: none;
+    position: absolute;
+  }
+}
+.#{$classPrex}-container {
+  font-size: 28px;
+  .#{$classPrex}-header {
+    padding: 26px 32px 60px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    &-cancel {
+      color: #cccccc;
+    }
+    &-title {
+      font-size: 32px;
+      color: #050505;
+      font-weight: bold;
+    }
+    &-confirm {
+      color: #09f;
+    } 
+  }
+  .#{$classPrex}-content {
+    $calendarClass: 'calendar-table';
+    padding-bottom: 40px;
+    .#{$calendarClass} {
+      &-row {
+        display: flex;
+        padding: 0 32px;
+      }
+      &-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-weekdays {
+        color: #666;
+        border-bottom: solid 1px #e5e5e5;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      &-title {
+        height: 42px;
+        line-height: 42px;
+        letter-spacing: 0px;
+        color: #050505;
+        font-weight: bold;
+        text-align: center;
+      }
+      &-months {
+        height: 60vh;
+        overflow-y: auto;
+      }
+      &-month {
+        padding-top: 32px;
+        .#{$calendarClass}-row {
+          margin-bottom: 8px;
+        }
+      }
+      &-day {
+        height: 100px;
+        transition: all .3s;
+        &-content {
+          width: 80px;
+          height: 80px;
+          border-radius: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &.is-disabled {
+          color: #999;
+        }
+        &.is-radio-active .#{$calendarClass}-day-content {
+          color: #fff;
+          background-color: #09f;
+          transition: all .3s;
+        }
+        &.is-range-start,  &.is-range-end {
+          color: #fff;
+          background-color: #09f;
+          border-radius: 8px;
+        }
+        &.is-range-middle {
+          color: #333;
+          background-color: #E0F3FF;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

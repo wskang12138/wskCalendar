@@ -53,8 +53,10 @@
     "@tarojs/runtime": "3.6.11",
     "@tarojs/shared": "3.6.11",
     "@tarojs/taro": "3.6.11",
+    "dayjs": "^1.11.10",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "weixin-js-sdk": "^1.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
