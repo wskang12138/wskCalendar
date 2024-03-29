@@ -1,159 +1,46 @@
-.lg-calendar-d {
-  position: relative;
-}
 
-.lg-calendar-d-tilte {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-
-  .lg-calendar-d-left-icon {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-color: #fff;
-    border-radius: 50%;
-
-    &::before {
-      display: block;
-      text-align: center;
-      line-height: 36px;
-      color: #989898;
-      font-size: 22px;
-    }
-  }
-
-  .lg-calendar-d-title-content {
-    display: inline-block;
-    margin: 0 107px;
-    font-family: PingFang-SC-Regular;
-    font-size: 30px;
-    font-weight: bold;
-    font-stretch: normal;
-    line-height: 36px;
-    color: #010101;
-  }
-
-  .lg-calendar-d-right-icon {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-color: #fff;
-    border-radius: 50%;
-
-    &::before {
-      display: block;
-      text-align: center;
-      line-height: 36px;
-      color: #989898;
-      font-size: 22px;
-    }
-  }
-}
-
-.lg-calendar-d-week {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: PingFang-SC-Regular;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  line-height: 24px;
-  color: #575757;
-
-  :nth-child(n) {
-    text-align: center;
-    flex: 1;
-  }
-}
-
-.lg-calendar-d-body {
-  position: relative;
+.week-calendar-e {
+  height: 210px;
   white-space: nowrap;
-  overflow: hidden;
-}
-
-.lg-calendar-d-body-panel {
-  width: fit-content;
-}
-
-.lg-calendar-d-month-body-wrapper {
-  display: inline-block;
-  height: 480px;
-}
-
-.lg-calendar-d-month-body {
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-}
-
-.lg-calendar-d-day {
-  width: calc(100% / 7);
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  .lg-calendar-d-day-wrapper{
-    position: relative;
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    line-height: 64px;
-    &.selected {
-      background-image: linear-gradient(#00a2ff,
-          #00a2ff),
-        linear-gradient(90deg,
-          #04caf4 0%,
-          #23a1fa 100%),
-        linear-gradient(#067af2,
-          #067af2);
-      background-blend-mode: normal,
-        normal,
-        normal;
-        .lg-calendar-d-day-content{
-          color: #fff;
-        }
-    }
-    .lg-calendar-d-day-content{
-      text-align: center;
-      font-family: PingFang-SC-Regular;
-      font-size: 28px;
-      line-height: 68px;
-      font-weight: normal;
-      font-stretch: normal;
-      color: #141414;
-    }
-  
-    .mark{
-        position: absolute; 
-        top: 49px;
-        left: 26px;
-        display: block;
-        content: '';
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #ff0000;
-        border: solid 1px #ffffff;
-    }
-  }
-
-  .week-day {
-    font-family: PingFang-SC-Regular;
-    font-size: 28px;
-    font-weight: normal;
-    font-stretch: normal;
-    color: #a0a0a0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  .week-calendar-e-item {
+      margin-top: 56px;
+      margin: 56px 30px 0;
+      display: inline-block;
+      .week-calendar-date {
+          font-family: PingFang-SC-Regular;
+          font-size: 30px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30px;
+          letter-spacing: -1px;
+          color: #717171;
+      }
+      .week-calendar-week {
+          margin-top: 19px;
+          width: 80px;
+          height: 80px;
+          font-family: PingFang-SC-Regular;
+          font-size: 30px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30px;
+          letter-spacing: -1px;
+          color: #989898;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &.passWeek {
+              color: #101010;
+          }
+      }
+      &.selected {
+          .week-calendar-week {
+              border-radius: 80px;
+              background-color: #00a2ff;
+              color: #ffffff;
+          }
+      }
   }
 }

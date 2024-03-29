@@ -5,16 +5,9 @@ import { FC, useMemo } from "react";
 import "./index.scss";
 import { createClassName } from "@/utils";
 import { getRecentMonth ,DayItemApi, getMonthInfo,} from "@/utils/calendar";
+import { MonthPropsType, PropsType } from "./types";
 
-interface PropsType {
-  startDate?: string;
-  disableDate?: any;
-  onDayClick?: any;
-  data?: string[];
-}
-interface MonthPropsType extends PropsType {
-  month:string;
-}
+
 
 const { rootClassNames, classNames } = createClassName("simple-calendar");
 
