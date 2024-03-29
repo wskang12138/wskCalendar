@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
+      
     .list_entry {
       width: fit-content;
       min-height: auto;
@@ -14,4 +14,7 @@
       line-height: 80px;
     }
   }
+}
+taro-button-core+taro-button-core{
+   margin-top: 0px!important;
 }

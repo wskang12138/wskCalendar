@@ -2,6 +2,7 @@ export default defineAppConfig({
   pages: [
     "pages/index/index",
     "pages/calendar/index",
+    "pages/swipeCalendar/index"
   ],
   window: {
     backgroundTextStyle: "light",
