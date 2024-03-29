@@ -2,11 +2,13 @@ import { View } from "@tarojs/components";
 import './index.scss'
 import { NavBar } from "@/components";
 import { SwipeCalendar } from "@/components/swipeCalendar";
+import { useState } from "react";
+import dayjs from "dayjs";
 
 export default function Index() {
-  
+    const [day,setDay] = useState(dayjs().format('YYYY-yy-MM'))
     function weekChange(day) {
-        console.log(day,8888)
+        setDay(day)
     }
 
     return (
@@ -16,6 +18,7 @@ export default function Index() {
                 <SwipeCalendar
                     onChange={(day) => { weekChange(day) }}
                 />
+                <View className="">{day}</View>
             </View>
         </View >
     )
