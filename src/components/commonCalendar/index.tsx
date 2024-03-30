@@ -5,16 +5,17 @@ import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
 import { transformToRemOrRpx } from "@/utils";
 
-
-export interface LgCalendarDProps {
+export interface CalendarDProps {
+    choseDay:(value: string) => void
     onDayChange?: (value: string) => void
     onMonthChange?: (year: number, month: number) => void
     onRenderingTime?: (params?: DayRendarProps) => ReactNode
     selectedDay?: string
     markDays?: Array<string>
+    getOrderStatus:(date)=>void
 }
 
-interface LgCalendarDState {
+interface CalendarDState {
     months: Array<{ year: number, month: number }>
     yearMonth: string
     scrollLeft: number
@@ -22,29 +23,42 @@ interface LgCalendarDState {
     selectedDay: string
 }
 
-let lgCalendarDId = 0
+let CalendarDId = 0
 
-export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> {
+export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
 
     private readonly id: string
     private monthWrapperWidth: number
 
     constructor(props) {
         super(props)
-
         const centerDay = this.props.selectedDay ? dayjs(this.props.selectedDay) : dayjs()
-
+        console.log('centerDay', centerDay);
         this.state = {
             months: this.reCreateMonths(this.props.selectedDay),
             yearMonth: `${centerDay.year()}-${centerDay.month() + 1}`,
             scrollLeft: 0,
             transition: "all 0.2s",
-            selectedDay: this.props.selectedDay || dayjs().format("YYYY-MM-DD")
+            selectedDay: this.props.selectedDay || dayjs().format("YYYY-MM-DD"),
         }
 
-        this.id = `lg-calendar-d-${lgCalendarDId++}`
+        this.id = `common-calendar-d-${CalendarDId++}`
+
     }
 
+    componentWillUpdate(nextProps: Readonly<CalendarDProps>, nextState: Readonly<CalendarDState>, nextContext: any): void {
+        if (this.props.selectedDay !== nextProps.selectedDay) {
+            const centerDay = nextProps.selectedDay ? dayjs(nextProps.selectedDay) : dayjs()
+            let yearMonth = `${centerDay.year()}-${centerDay.month() + 1}`
+            this.setState({
+                yearMonth,
+                months: this.reCreateMonths(nextProps.selectedDay),
+                selectedDay: nextProps.selectedDay || dayjs().format("YYYY-MM-DD")
+            }, () => {
+                this.props.choseDay(this.state.selectedDay)
+            })
+        }
+    }
     reCreateMonths(centerDay?: string) {
         const months = new Array<{ year: number, month: number }>()
         let centerMonth = dayjs().startOf("month")
@@ -106,7 +120,7 @@ export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> 
     componentDidMount() {
         setTimeout(() => {
             Taro.createSelectorQuery()
-                .select(`#${this.id} .lg-calendar-d-month-body-wrapper`)
+                .select(`#${this.id} .common-calendar-d-month-body-wrapper`)
                 .boundingClientRect((res:any) => {
                     this.monthWrapperWidth = res.width
                     this.setState({
@@ -116,12 +130,12 @@ export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> 
         }, 200)
     }
 
-    changeSelectedDay(selectedDay: string) {
+    changeSelectedDay = (selectedDay: string) => {
         this.setState({
             selectedDay: selectedDay
         }, () => {
             if (this.props.onDayChange) {
-                this.props.onDayChange(selectedDay)
+                this.props.onDayChange(this.state.selectedDay)
             }
         })
     }
@@ -129,18 +143,19 @@ export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> 
     render() {
         const translateX = transformToRemOrRpx(-this.state.scrollLeft)
         let { onRenderingTime } = this.props
+        // console.log(this.state.selectedDay);
         return (
-            <View id={this.id} className="lg-calendar-d" >
-                <View className="lg-calendar-d-tilte">
+            <View id={this.id} className="common-calendar-d" >
+                <View className="common-calendar-d-tilte">
                     <View>
-                        <View onClick={() => this.toPrevMonth()} className="icon-b00401 lg-calendar-d-left-icon" />
-                        <View className="lg-calendar-d-title-content">{this.state.yearMonth}</View>
-                        <View onClick={() => this.toNextMonth()} className="icon-b01901 lg-calendar-d-right-icon" />
+                        <View onClick={() => {this.toPrevMonth();this.props.getOrderStatus(this.state.yearMonth)}} className="icon-b00401 common-calendar-d-left-icon" />
+                        <View className="common-calendar-d-title-content">{this.state.yearMonth.replace('-','年')+'月'}</View>
+                        <View onClick={() => {this.toNextMonth();this.props.getOrderStatus(this.state.yearMonth)}} className="icon-b01901 common-calendar-d-right-icon" />
                     </View>
                 </View>
                 <WeekTitle />
-                <View className="lg-calendar-d-body">
-                    <View className="lg-calendar-d-body-panel" style={{ transform: `translateX(${translateX})`, transition: this.state.transition }}>
+                <View className="common-calendar-d-body">
+                    <View className="common-calendar-d-body-panel" style={{ transform: `translateX(${translateX})`, transition: this.state.transition }}>
                         {
                             this.state.months.map(item => <MonthBody markDays={this.props.markDays} onChangeSelectedDay={(selectedDay) => this.changeSelectedDay(selectedDay)} selectedDay={this.state.selectedDay} key={`${item.year}-${item.month}`} year={item.year} month={item.month} onRenderingTime={onRenderingTime} />)
                         }
@@ -153,7 +168,7 @@ export class WeekCalendar extends Component<LgCalendarDProps, LgCalendarDState> 
 
 const WeekTitle = memo(() => {
     return (
-        <View className="lg-calendar-d-week">
+        <View className="common-calendar-d-week">
             <View>日</View>
             <View>一</View>
             <View>二</View>
@@ -243,8 +258,8 @@ class MonthBody extends Component<MonthBodyProps, MonthBodyState> {
 
     render() {
         return (
-            <View className="lg-calendar-d-month-body-wrapper">
-                <View className="lg-calendar-d-month-body">
+            <View className="common-calendar-d-month-body-wrapper">
+                <View className="common-calendar-d-month-body">
                     {
                         this.state.dayArr.map((item, index) =>
                             <DayRender
@@ -252,7 +267,7 @@ class MonthBody extends Component<MonthBodyProps, MonthBodyState> {
                                 year={item.year}
                                 month={item.month}
                                 day={item.day}
-                                key={index}
+                                key={'dayArr'+index}
                                 mark={item.mark}
                                 selected={dayjs(this.props.selectedDay).isSame(`${item.year}-${item.month}-${item.day}`)}
                                 onRenderingTime={this.props.onRenderingTime}
@@ -293,15 +308,15 @@ class DayRender extends Component<DayRendarProps>{
         if (this.props.selected) {
             classNames.push("selected")
         }
-        classNames.push("lg-calendar-d-day-wrapper");
+        classNames.push("common-calendar-d-day-wrapper");
         let { onRenderingTime } = this.props
         return (
             <View onClick={this.props.onClick}
                 style={{ marginLeft: this.props.day == 1 ? (dayPaddings[dayjs(`${this.props.year}-${this.props.month}-${this.props.day}`).day()] + "%") : "0" }}
-                className="lg-calendar-d-day"
+                className="common-calendar-d-day"
             >
                 <View className={classNames.join(" ")}>
-                    <View className="lg-calendar-d-day-content">
+                    <View className="common-calendar-d-day-content">
                         {onRenderingTime ? onRenderingTime(this.props) : this.props.day}
                     </View>
                     {

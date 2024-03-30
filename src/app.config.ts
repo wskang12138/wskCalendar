@@ -6,6 +6,7 @@ export default defineAppConfig({
     "pages/weekCalendar/index",
     "pages/simpleCalendar/index",
     "pages/tabsCalendar/index",
+    "pages/commonCalendar/index",
   ],
   window: {
     backgroundTextStyle: "light",
