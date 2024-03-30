@@ -1,0 +1,15 @@
+$classNamePrefix: "refreshable-page-container";
+.#{$classNamePrefix}-root {
+    .#{$classNamePrefix}-page-root {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        .dragUpdataPage_children {
+            min-height: 100%;
+        }
+    }
+    .dragUpdataPage {
+        height: 100%;
+    }
+}

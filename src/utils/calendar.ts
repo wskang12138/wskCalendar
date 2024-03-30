@@ -1,5 +1,7 @@
 import { TabItemDataApi } from "@/components/tabsCanlendar/types";
+import Taro from "@tarojs/taro";
 import dayjs from "dayjs";
+import { ReactNode } from "react";
 
 export interface DayItemApi {
   day: string;
@@ -190,3 +192,11 @@ export function debounce(fn: any, wait = 1000) {
     }
     return list;
   };
+
+  export const initThePageNavigationBar: ReactNode | any = (navigationView: ReactNode, title?: string) => {
+    let defaultView: ReactNode =''
+    let environmentalValue = Taro.getEnv();
+    if (title !== undefined) { if (window) { window.document.title = title || ''; } }
+    // return environmentalValue !== 'wx-webview' ? navigationView : defaultView
+    return navigationView
+}
