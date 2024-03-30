@@ -1,3 +1,4 @@
+import { TabItemDataApi } from "@/components/tabsCanlendar/types";
 import dayjs from "dayjs";
 
 export interface DayItemApi {
@@ -167,3 +168,25 @@ export function debounce(fn: any, wait = 1000) {
     }, wait);
   };
 }
+  // 获取最近几个月
+ export const getRecentMonths = (num: number) => {
+    let list: TabItemDataApi[] = [];
+    let curDate = dayjs();
+    const getItem = (date: any, isCurrent?: boolean) => {
+      return {
+        value: date.format("YYYY-MM"),
+        label: `${date.month() + 1}月`,
+        subLabel: isCurrent ? "本月" : "",
+        info: {
+          beginDate: date.startOf("month").format("YYYY-MM-DD"),
+          endDate: date.endOf("month").format("YYYY-MM-DD"),
+        },
+      };
+    };
+    list.push(getItem(curDate, true));
+    for (let i = 0; i < num - 1; i++) {
+      curDate = curDate.subtract(1, "month");
+      list.unshift(getItem(curDate));
+    }
+    return list;
+  };

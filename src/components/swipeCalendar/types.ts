@@ -1,7 +1,8 @@
-import { BaseComponent } from "@/types/BaseComponent"
+
+import { BaseProps } from "@/types/BaseComponent"
 import dayjs from "dayjs"
 
-export interface CalendarProps extends BaseComponent {
+export interface CalendarProps extends BaseProps {
   selectedDay?: string
   onChange?: (selectedDay: string) => void
   onShowCalendar?: () => void

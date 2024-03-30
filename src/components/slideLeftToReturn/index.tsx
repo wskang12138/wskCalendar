@@ -1,7 +1,7 @@
 import { ITouchEvent, View } from '@tarojs/components'
 import { Component } from 'react'
 import Taro from "@tarojs/taro"
-import { SlideLeftToReturnProps } from '../../types';
+import { SlideLeftToReturnProps } from './types'
 
 export class SlideLeftToReturn extends Component<SlideLeftToReturnProps, {}> {
     private returnPage: boolean = false;

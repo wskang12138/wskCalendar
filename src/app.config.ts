@@ -5,6 +5,7 @@ export default defineAppConfig({
     "pages/swipeCalendar/index",
     "pages/weekCalendar/index",
     "pages/simpleCalendar/index",
+    "pages/tabsCalendar/index",
   ],
   window: {
     backgroundTextStyle: "light",
