@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { View, Image } from "@tarojs/components";
 import "./index.scss";
-import CloseSvg from '@/images/close.svg'
+import CloseSvg from '../../images/close.svg'
 import { PopLayerPosition, PopLayerProps, PopLayerState } from "./types";
 
 
