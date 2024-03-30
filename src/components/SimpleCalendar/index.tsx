@@ -60,13 +60,10 @@ const MonthItem: FC<MonthPropsType> = (props) => {
       {monthInfo.weeks.map((w: DayItemApi[], ind: number) => (
         <View className={classNames("month-row", "month-week")} key={ind}>
           {w.map((day: DayItemApi, iind: number) => {
-            console.log(getDayClass(day),88888888)
             return (
               <View
                 className={classNames("month-col", "month-day", getDayClass(day))}
                 key={iind}
-                 // @ts-ignore
-                style={{visibility:`${(getDayClass(day))['month-day-disabled'] ==true?"hidden":'Visible'}`}}
                 onClick={() => handleDayClick(day)}
               >
                 {day.day}

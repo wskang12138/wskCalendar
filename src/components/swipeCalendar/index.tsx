@@ -2,7 +2,7 @@ import { ITouchEvent, View } from "@tarojs/components";
 import { Component, memo } from "react";
 import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
-import { transformToRemOrRpx } from "../../utils";
+import { transformToRemOrRpx1 } from "../../utils";
 import "./index.scss"
 import { CalendarProps, CalendarState, DayType } from "./types";
 
@@ -358,7 +358,7 @@ export class SwipeCalendar extends Component<CalendarProps, CalendarState> {
   }
 
   render() {
-    const translateX = transformToRemOrRpx(this.state.scrollLeft)
+    const translateX = transformToRemOrRpx1(this.state.scrollLeft)
     return (
       <View id={this.id} className="calendar">
         <View className="swipe-calendar-day">

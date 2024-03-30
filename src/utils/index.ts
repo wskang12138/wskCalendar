@@ -7,6 +7,27 @@ export * from "./DeviceController"
 export * from './WxSdk'
 export * from './classNameUtils'
 
+export const transformToRemOrRpx1 = function (size) {
+  const width = Taro.getSystemInfoSync().windowWidth;
+  const pixelRatio = 750 / width;
+  if (process.env.TARO_ENV === 'weapp') {
+    return size * pixelRatio + "rpx";
+  }
+  else {
+    if (width >= 640) {
+      var baseSize = 40;
+    }
+    else if (width <= 320) {
+      var baseSize = 20;
+    }
+    else {
+      var baseSize = width / 320 * 20;
+    }
+    return size / baseSize + "rem";
+  }
+};
+
+
 export const transformToRemOrRpx = function (size: number): string {
   var transSize = "0";
   Taro.getSystemInfo({
@@ -30,8 +51,6 @@ export const transformToRemOrRpx = function (size: number): string {
   });
   return transSize;
 };
-
-
 interface AnyObject {
   [prop: string]: any
 }

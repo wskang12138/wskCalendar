@@ -4,27 +4,9 @@ import "./index.scss"
 import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
 import { transformToRemOrRpx } from "@/utils";
-
-export interface CalendarDProps {
-    choseDay:(value: string) => void
-    onDayChange?: (value: string) => void
-    onMonthChange?: (year: number, month: number) => void
-    onRenderingTime?: (params?: DayRendarProps) => ReactNode
-    selectedDay?: string
-    markDays?: Array<string>
-    getOrderStatus:(date)=>void
-}
-
-interface CalendarDState {
-    months: Array<{ year: number, month: number }>
-    yearMonth: string
-    scrollLeft: number
-    transition: string
-    selectedDay: string
-}
+import { CalendarDProps, CalendarDState, DayRendarProps } from "./types";
 
 let CalendarDId = 0
-
 export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
 
     private readonly id: string
@@ -41,11 +23,9 @@ export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
             transition: "all 0.2s",
             selectedDay: this.props.selectedDay || dayjs().format("YYYY-MM-DD"),
         }
-
         this.id = `common-calendar-d-${CalendarDId++}`
 
     }
-
     componentWillUpdate(nextProps: Readonly<CalendarDProps>, nextState: Readonly<CalendarDState>, nextContext: any): void {
         if (this.props.selectedDay !== nextProps.selectedDay) {
             const centerDay = nextProps.selectedDay ? dayjs(nextProps.selectedDay) : dayjs()
@@ -284,16 +264,6 @@ class MonthBody extends Component<MonthBodyProps, MonthBodyState> {
 const dayPaddings = new Array<number>()
 for (let i = 0; i < 7; i++) {
     dayPaddings.push(i * 100 / 7)
-}
-
-export interface DayRendarProps {
-    year: number
-    month: number
-    day: number
-    selected: boolean
-    onClick: () => void
-    mark?: boolean
-    onRenderingTime?: (params?: DayRendarProps) => ReactNode
 }
 
 class DayRender extends Component<DayRendarProps>{
