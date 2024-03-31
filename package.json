@@ -1,6 +1,6 @@
 {
   "name": "wskcalendar",
-  "version": "1.0.1",
+  "version": "1.11.11",
   "private": false,
   "description": "wskCalendar",
   "templateInfo": {
@@ -38,7 +38,12 @@
   ],
   "author": "",
   "dependencies": {
+    "@babel/generator": "^7.24.1",
+    "@babel/parser": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
     "@babel/runtime": "^7.21.5",
+    "@babel/traverse": "^7.24.1",
+    "@rollup/plugin-replace": "^5.0.5",
     "@tarojs/components": "3.6.10",
     "@tarojs/helper": "3.6.10",
     "@tarojs/plugin-framework-react": "3.6.10",
@@ -59,7 +64,7 @@
     "weixin-js-sdk": "^1.6.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
+    "@babel/core": "^7.24.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-image": "^3.0.2",

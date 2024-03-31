@@ -49,9 +49,9 @@ export const CalendarPop: FC<PropsType> = (props) => {
     }
   };
 
-  const monthsRef = useRef<HTMLDivElement>();
+  const monthsRef = useRef<any>();
   const getMonthsRef = () => {
-    return monthsRef.current as HTMLDivElement;
+    return monthsRef.current as any;
   };
   const [months, setMonths] = useState(
     getRecentMonth(4, data instanceof Array ? data?.[0] : data)

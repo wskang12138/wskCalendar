@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {Component} from 'react'
 import {View, Text, ScrollView} from '@tarojs/components'
 import './index.scss'
@@ -169,7 +170,7 @@ export  class RefreshPage extends Component {
 
   scrollPage(e) {
     this.isInTop = e.detail.scrollTop < 10 ? true : false;
-    this.isInBottom = e.detail.scrollHeight - (e.detail.scrollTop + this.state.windowHeight) < 10 ? true : false;
+    this.isInBottom = e.detail.scrollHeight - (e.detail.scrollTop + this.state?.windowHeight) < 10 ? true : false;
     console.log(this.isInTop, this.isInBottom);
   }
 
