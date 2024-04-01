@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
-// import { NavBar, LgSearch  } from "lancoo-ui-mobile";
+// import { NavBar, LgSearch  } from "wskcalendar";
 import "../index.scss";
 
 export const Jsx = () => {

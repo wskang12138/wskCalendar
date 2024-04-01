@@ -4,22 +4,12 @@ export const guideSidebarTabs = [
     title: '快速上手',
     link: '/website/guide/quick-start'
   },
-  {
-    title: '更新日志',
-    link: '/website/guide/log'
-  },
-  {
-    title: '文字标准',
-    link: '/website/guide/font-standard'
-  },
+
   {
     title: '颜色标准',
     link: '/website/guide/color-standard'
   },
-  {
-    title: '布局标准',
-    link: '/website/guide/layout-standard'
-  }
+
 ]
 
 // 组件侧边栏导航

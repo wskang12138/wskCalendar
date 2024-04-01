@@ -1,8 +1,8 @@
 ```jsx
 import React, { useState, useCallback } from "react";
 import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
-import { LgPopLayer, LgButton } from "lancoo-ui-mobile";
+import {Button, View } from "@tarojs/components";
+import {PopLayer,Button } from "wskcalendar";
 import "../index.scss";
 
 export const Jsx = () => {
@@ -21,15 +21,15 @@ export const Jsx = () => {
     <View className="iframe__viewport">
       <View className="viewport__title">向下弹出</View>
       <View className="viewport__main">
-        <LgButton onClick={handleLayer}>显示上方弹出层</LgButton>
-        <LgPopLayer
+        <Button onClick={handleLayer}>显示上方弹出层</Button>
+        <PopLayer
           position="top"
           isOpen={isOpen}
           confirm={confirm}
           showLayer={handleLayer}
         >
-          <View className="lg-poplayer__content">自定义内容</View>
-        </LgPopLayer>
+          <View className="-poplayer__content">自定义内容</View>
+        </PopLayer>
       </View>
     </View>
   );
