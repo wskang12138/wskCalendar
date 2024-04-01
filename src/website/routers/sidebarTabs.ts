@@ -15,7 +15,7 @@ export const guideSidebarTabs = [
 // 组件侧边栏导航
 export const componentsSidebarTabs = [
   {
-    title: '通用',
+    title: '日历',
     isSeparator: true,
     link: ''
   },
@@ -23,32 +23,4 @@ export const componentsSidebarTabs = [
     title: 'Button 按钮',
     link: '/website/components/button',
   },
-]
-
-// API侧边栏导航
-export const apiSidebarTabs = [
-  {
-    title: '浏览器信息与控制',
-    link: '/website/api/browser-controller'
-  },
-  {
-    title: '存储控制',
-    link: '/website/api/storage'
-  },
-  {
-    title: '上传下载',
-    link: '/website/api/upload-download'
-  },
-  {
-    title: '小程序登录',
-    link: '/website/api/applet-login'
-  },
-  {
-    title: '请求/代理',
-    link: '/website/api/request-proxy'
-  },
-  {
-    title: '硬件调用',
-    link: '/website/api/device-controller'
-  }
 ]

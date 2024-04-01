@@ -8,11 +8,9 @@ const Website = lazy(() => import('@/website/index'));
 const Demos = lazy(() => import('./../demos/index'));
 
 function Index() {
-  console.log(websiteRoutes, 888)
+
   return (
     <BrowserRouter>
-
-
       <View>
         <Suspense fallback={<View className='lazy-fallback'>loading...</View>}>
           <Routes>

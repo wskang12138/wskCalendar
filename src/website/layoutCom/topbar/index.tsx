@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { View, Image } from "@tarojs/components"
-import { guideSidebarTabs, componentsSidebarTabs, apiSidebarTabs } from "@/website/routers";
+import { guideSidebarTabs, componentsSidebarTabs } from "@/website/routers";
 import event from "@/website/index/event";
 import ic_empty from '@/website/assets/images/svg/empty.svg';
 import ic_day from '@/website/assets/images/svg/day.svg';
@@ -67,7 +67,7 @@ export const Topbar: FC<TopbarProps> = React.memo(
       // 重置高光
       highLightIndex !== -1 && setHighLightIndex(-1);
       // 搜索字典
-      const searchDict = [...guideSidebarTabs, ...componentsSidebarTabs, ...apiSidebarTabs];
+      const searchDict = [...guideSidebarTabs, ...componentsSidebarTabs];
       // 新联想
       const _associates = searchDict.filter(item => {
         // 转为小写字母再比较
@@ -195,7 +195,7 @@ export const Topbar: FC<TopbarProps> = React.memo(
     const Jsx = useMemo(() => (
       <View className={`topbar ${className}`} style={style}>
         <View className='topbar--left'>
-          <Link className='topbar--left__logo' to='/'>WSK</Link>
+          <Link className='topbar--left__logo' to='/'>wskCalendar</Link>
           <View className='topbar--left__search'>
             <input
               ref={inputRef}

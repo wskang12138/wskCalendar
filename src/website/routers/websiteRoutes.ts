@@ -4,7 +4,6 @@ import { lazy } from 'react';
 const HomePage = lazy(() => import('@/website/home/index'));
 const GuidePage = lazy(() => import('@/website/guide/index'));
 const ComponentPages = lazy(() => import('@/website/components/index'));
-
 // 指南
 const QuickStart = lazy(() => import('@/website/guide/quick-start'));
 const ColorStandard = lazy(() => import('@/website/guide/color-standard'));

@@ -9,7 +9,7 @@ export const topbarTabs = [
     link: '/website/components'
   },
   {
-    title: '返回',
+    title: '返回PC',
     link: '/website/api'
   }
 ]

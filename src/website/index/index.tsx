@@ -1,7 +1,7 @@
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { View } from '@tarojs/components';
-import { Topbar, PreviewImage, PreviewImageRef } from "@/website/layoutCom";
+import { Topbar, PreviewImageRef } from "@/website/layoutCom";
 import { topbarTabs } from '@/website/routers';
 import event from './event';
 import './index.scss';
