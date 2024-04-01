@@ -59,8 +59,10 @@
     "@tarojs/shared": "3.6.10",
     "@tarojs/taro": "3.6.10",
     "dayjs": "^1.11.10",
+    "marked": "^12.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.22.3",
     "weixin-js-sdk": "^1.6.5"
   },
   "devDependencies": {

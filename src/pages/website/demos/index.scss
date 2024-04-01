@@ -1,0 +1,9 @@
+#iframe {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: var(--iframe-background-color, #fafbfc);
+}

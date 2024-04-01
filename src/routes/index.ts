@@ -8,4 +8,5 @@ export const Routes = [
   { name: '简单日历', url: '/pages/simpleCalendar/index' },
   { name: '选项日历', url: '/pages/tabsCalendar/index' },
   { name: '常用日历', url: '/pages/commonCalendar/index' },
+  { name: '演示官网', url: '/pages/website/index' },
 ]

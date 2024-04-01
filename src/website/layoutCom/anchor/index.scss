@@ -1,0 +1,48 @@
+.anchor {
+  position: relative;
+  min-width: 120PX;
+  padding: 8PX 0;
+  font-size: 12PX;
+  background-color: var(--anchor-background-color, #fff);
+  color: var(--anchor-color, #333333e6);
+
+  .anchor__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1PX;
+    height: 100%;
+    background-color: var(--anchor-bar-background-color, #e7e7e7);
+  }
+
+  .anchor__bar--active {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 13PX;
+    left: 0;
+    z-index: 1;
+    width: 1PX;
+    height: 16PX;
+    transition: transform 0.4s;
+    background-color: var(--anchor-bar-active-background-color, #083e79);
+  }
+
+  .anchor__subAnchor {
+    position: relative;
+    height: 26PX;
+    padding-right: 20PX;
+    line-height: 26PX;
+    font-size: 12PX;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--anchor-active-color, #083e79);
+    }
+
+    &.active {
+      color: var(--anchor-active-color, #083e79);
+    }
+  }
+}

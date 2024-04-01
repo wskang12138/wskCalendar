@@ -1,0 +1,28 @@
+.lg-poplayer__bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110PX;
+  font-size: 16PX;
+  background-color: #eee;
+  color: #999;
+}
+
+.lg-poplayer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60PX;
+  font-size: 16PX;
+  color: #999;
+}
+
+.lg-poplayer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 40PX);
+  margin-top: 65PX;
+  font-size: 18PX;
+  color: #999;
+}

@@ -1,0 +1,570 @@
+@mixin dayNightMode {
+  /**
+  * css变量
+  */
+  // 整体背景颜色
+  --index-background-color: #fff;
+
+  // 懒加载变量
+  --lazy-loading-color: #666;
+
+  // 主页变量
+  --home-banner-background-color: #f5f6f8;
+  --home-supplement-color: #454d64;
+  --home-banner-button-color: #4569d4;
+  --home-banner-hover-button-color: #587def;
+  --home-item-title-color: #454d64;
+  --home-item-desc-color: #717484;
+
+  // 页面背景变量
+  --page-background-color: #fff;
+
+  // 顶栏变量
+  --topbar-background-color: #fff;
+  --topbar-border-color: #e6e6e6;
+  --topbar-tabs-color: #666;
+  --topbar-search-color: #050505;
+  --topbar-search-background-color: #f5f7fa;
+
+  // 侧边栏变量
+  --sidebar-background-color: #fff;
+  --sidebar-color: #666;
+  --sidebar-active-color: #1677ff;
+  --sidebar-hover-background-color: #f3f3f3;
+  --sidebar-active-background-color: #e6f4ff;
+
+  // 锚点变量
+  --anchor-background-color: #fff;
+  --anchor-color: #333333e6;
+  --anchor-bar-background-color: #e7e7e7;
+  --anchor-bar-active-background-color: #083e79;
+  --anchor-active-color: #083e79;
+
+  // md变量
+  --title-color: #0d1a26;
+  --desc-color: #314659;
+  --sub-title-color: #0d1a26;
+  --code-color: #333;
+  --keyword-color: #07a;
+  --string-color: #905;
+  --tag-color: #905;
+  --name-color: #dd4a68;
+  --attr-color: #690;
+  --function-color: #9a6e3a;
+  --comment-color: #708090;
+  --number-color: #905;
+  --params-color: #905;
+  --literal-color: #07a;
+  --meta-color: #670;
+  --pre-background-color: rgb(245, 247, 250);
+  --table-th-background-color: #f5f7fa;
+  --border-color: #e6e6eb;
+  --td-border-color: #f0f1f3;
+  --td-code-color: #314659;
+  --code-background-color: rgb(244, 244, 244);
+  --supplement-color: #636363;
+  --table-code-background-color: #f5f7fa;
+  --blockquite-background-color: rgb(246, 253, 255);
+
+  // 示例代码变量
+  --previewer-detail-border-color: rgb(240, 241, 243);
+
+  // 滚动条变量
+  --scrollbar-color: rgb(238, 238, 238);
+  --scrollbar-thumb-color: rgb(200, 200, 200);
+
+  // 夜间模式按钮变量
+  --mode-btn-background-color: #fafbfc;
+  --mode-btn-border-color: #999;
+
+  &.night-mode {
+    /**
+      * 夜间模式
+      */
+
+    // 整体背景颜色
+    --index-background-color: #222;
+
+    // 懒加载变量
+    --lazy-loading-color: #ddd;
+
+    // 主页变量
+    --home-banner-background-color: #c9c9c9;
+    --home-supplement-color: #424a60;
+    --home-banner-button-color: rgb(63, 95, 193);
+    --home-banner-hover-button-color: #4e73e2;
+    --home-item-title-color: #6f7eac;
+    --home-item-desc-color: #9a9eb3;
+
+    // 页面背景变量
+    --page-background-color: #222;
+
+    // 顶栏变量
+    --topbar-background-color: #222;
+    --topbar-border-color: #555;
+    --topbar-tabs-color: rgb(209, 209, 209);
+    --topbar-search-color: #eee;
+    --topbar-search-background-color: #545454;
+
+    // 侧边栏变量
+    --sidebar-background-color: #333;
+    --sidebar-color: #ccc;
+    --sidebar-active-color: rgb(129, 182, 255);
+    --sidebar-hover-background-color: #222;
+    --sidebar-active-background-color: #1c2f43;
+
+    // 锚点变量
+    --anchor-background-color: #222;
+    --anchor-color: #eee;
+    --anchor-bar-background-color: #eee;
+    --anchor-bar-active-background-color: #0099ff;
+    --anchor-active-color: #0099ff;
+
+    // md变量
+    --title-color: #eee;
+    --desc-color: #ddd;
+    --sub-title-color: #eee;
+    --code-color: #ddd;
+    --keyword-color: rgb(61, 188, 242);
+    --string-color: rgb(255, 0, 140);
+    --tag-color: rgb(255, 37, 157);
+    --name-color: #ff5779;
+    --attr-color: rgb(136, 203, 0);
+    --function-color: #d59a52;
+    --comment-color: #aaa;
+    --number-color: rgb(255, 37, 157);
+    --params-color: rgb(255, 37, 157);
+    --literal-color: rgb(0, 179, 255);
+    --meta-color: rgb(217, 255, 0);
+    --pre-background-color: #333;
+    --table-th-background-color: #555;
+    --border-color: #555;
+    --td-border-color: #555;
+    --td-code-color: #ff7875;
+    --code-background-color: rgb(50, 50, 50);
+    --supplement-color: #d8d8d8;
+    --table-code-background-color: hsla(0, 0%, 100%, 0.08);
+    --blockquite-background-color: rgb(62, 57, 57);
+
+    // 示例代码变量
+    --previewer-detail-border-color: #555;
+
+    // 滚动条变量
+    --scrollbar-color: rgb(190, 190, 190);
+    --scrollbar-thumb-color: rgb(116, 116, 116);
+
+    // 夜间模式按钮变量
+    --mode-btn-background-color: #050505;
+    --mode-btn-border-color: #666;
+
+    .topbar__search__associate {
+      filter: invert(0.8);
+      color: #000;
+    }
+
+    .previewer__iframe {
+      filter: brightness(0.8);
+    }
+
+    .mode__image,
+    .btn__image {
+      filter: invert(1);
+    }
+  }
+}
+
+@mixin showScrollbar {
+  &::-webkit-scrollbar {
+    width: 15PX;
+    height: 15PX;
+    background-color: var(--scrollbar-color, rgb(238, 238, 238));
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color, rgb(200, 200, 200));
+  }
+}
+
+@mixin showScrollbarY {
+  &::-webkit-scrollbar {
+    width: 15PX;
+    height: 0;
+    background-color: var(--scrollbar-color, rgb(238, 238, 238));
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color, rgb(200, 200, 200));
+  }
+}
+
+@mixin fontFamilyCode {
+  font-family: ui-monospace, SFMono-Regular, "sf mono", Menlo, Consolas,
+    "liberation mono", monospace;
+}
+
+@mixin fontFamilyBlock {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC,
+    Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+h3 {
+  @include fontFamilyBlock();
+  padding-bottom: 20PX;
+  font-weight: 500;
+  font-variant: tabular-nums;
+  font-feature-settings: "tnum", "tnum";
+  font-size: 18PX;
+  color: var(--sub-title-color, #0d1a26);
+}
+
+
+code {
+  @include fontFamilyCode();
+  padding: 2PX;
+  font-size: 13PX;
+  background-color: var(--code-background-color, rgb(244, 244, 244));
+  color: var(--code-color, #333);
+}
+
+pre {
+  code {
+    padding: 0;
+    font-size: 14PX;
+    background-color: #ffffff00;
+  }
+}
+
+strong {
+  @include fontFamilyBlock();
+  font-weight: 500;
+  color: var(--title-color, #0d1a26);
+}
+
+ul {
+  margin: 8PX 0 8PX 32PX;
+  color: var(--desc-color, #314659);
+
+  li {
+    margin-bottom: 4PX;
+  }
+}
+
+blockquote {
+  @include fontFamilyBlock();
+  width: 800PX;
+  margin: 10PX 0 30PX 0;
+  padding: 10PX 20PX;
+  box-sizing: border-box;
+  border-left: 6PX solid rgb(213, 224, 228);
+  background-color: var(--blockquite-background-color, rgb(246, 253, 255));
+  color: var(--desc-color, #314659);
+
+  p {
+    white-space: pre-wrap;
+  }
+}
+
+.hljs-keyword {
+  color: var(--keyword-color, #07a);
+}
+
+.hljs-string {
+  color: var(--string-color, #905);
+}
+
+.hljs-tag {
+  color: var(--tag-color, #905);
+}
+
+.hljs-name {
+  color: var(--name-color, #dd4a68);
+}
+
+.hljs-attr {
+  color: var(--attr-color, #690);
+}
+
+.hljs-function {
+  color: var(--function-color, #9a6e3a);
+}
+
+.hljs-comment {
+  color: var(--comment-color, #708090);
+}
+
+.hljs-number {
+  color: var(--number-color, #905);
+}
+
+.hljs-params {
+  color: var(--params-color, #905);
+}
+
+.hljs-literal {
+  color: var(--literal-color, #07a);
+}
+
+.hljs-meta {
+  color: var(--meta-color, #670);
+}
+
+.taro_page {
+  @include showScrollbar();
+  overflow: auto;
+
+  .lazy-fallback {
+    margin: 40PX;
+    font-size: 16PX;
+    color: var(--lazy-loading-color, #666);
+  }
+
+  #index {
+    @include showScrollbarY();
+    @include dayNightMode();
+
+    .doc {
+      user-select: text;
+      padding: 20PX 20PX 20PX 40PX;
+      box-sizing: border-box;
+      width: 100%;
+
+      .doc__anchor {
+        @media screen and (max-width: 1400PX) {
+          display: none;
+        }
+
+        position: fixed;
+        top: 200PX;
+        left: 1250PX;
+        z-index: 999;
+      }
+
+      h1,
+      .doc__title {
+        @include fontFamilyBlock();
+        padding: 20PX 0;
+        font-size: 30PX;
+        font-weight: 500;
+        color: var(--title-color, #0d1a26);
+      }
+
+      .doc__description {
+        padding: 16PX 0;
+        font-size: 14PX;
+        color: var(--desc-color, #314659);
+      }
+
+      h2,
+      .doc__example,
+      .doc__when-use-title,
+      .doc__props--title {
+        padding-top: 25PX;
+        font-size: 24PX;
+        font-weight: 500;
+        color: var(--title-color, #0d1a26);
+      }
+
+      .doc__when-use {
+        width: 800PX;
+        padding: 16PX 0;
+        font-size: 14PX;
+        line-height: 30PX;
+        color: var(--desc-color, #314659);
+      }
+
+      .doc__sub-title {
+        padding: 18PX 0;
+        font-size: 18PX;
+        color: var(--sub-title-color, #0d1a26);
+      }
+
+      .doc__supplement {
+        padding-bottom: 12PX;
+        font-size: 14PX;
+        color: var(--supplement-color, #636363);
+      }
+
+      .doc__previewer {
+        display: flex;
+        width: fit-content;
+        height: 600PX;
+        margin: 20PX 0;
+        border: 1PX solid var(--border-color, #e6e6eb);
+        border-radius: 12PX;
+        overflow: hidden;
+
+        .previewer__detail {
+          width: 600PX;
+          overflow: auto;
+
+          .detail__topbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 40PX;
+            padding-right: 20PX;
+            border-bottom: 1PX solid var(--previewer-detail-border-color, rgb(240, 241, 243));
+
+            .topbar__ic {
+              width: 16PX;
+              height: 16PX;
+              cursor: pointer;
+            }
+          }
+
+          .detail__code {
+            @include showScrollbar();
+
+            height: calc(100% - 67PX);
+            overflow: auto;
+            padding: 13PX;
+            font-size: 14PX;
+            white-space: pre;
+          }
+        }
+
+        .previewer__iframe {
+          border: none;
+          border-left: 1PX solid #e6e6e6;
+        }
+      }
+
+      .doc__props {
+        overflow: hidden;
+        width: fit-content;
+        height: fit-content;
+        padding: 20PX 0;
+      }
+
+      &.doc--guide,
+      &.doc--api {
+        padding-bottom: 70PX;
+        font-size: 14PX;
+
+        .doc__html {
+          table {
+            margin-top: 20PX;
+          }
+
+          ul {
+            margin-top: 20PX;
+          }
+
+          a {
+            color: #1677ff;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          ol {
+            font-size: 15PX;
+
+            li {
+              margin: 0 0 5PX 20PX;
+              padding-left: 10PX;
+            }
+          }
+
+          pre {
+            width: 800PX;
+            margin: 10PX 0 30PX 0;
+            padding: 13PX;
+            box-sizing: border-box;
+            border-radius: 12PX;
+            background-color: var(--pre-background-color, rgb(245, 247, 250));
+
+            code {
+              white-space: pre-wrap;
+              line-height: 20PX;
+            }
+          }
+        }
+
+        .doc__html--with-img {
+          h3 {
+            margin-top: 20PX;
+            padding-bottom: 0;
+          }
+
+          img {
+            max-width: 100%;
+            max-height: 600PX;
+            margin: 20PX 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  #iframe {
+    .iframe__viewport {
+      height: 100%;
+      font-size: 14PX;
+
+      .viewport__title {
+        padding: 12PX 12PX 8PX;
+        color: var(--iframe-color, #697b8c);
+      }
+
+      .viewport__main {
+        padding: 12PX 12PX 8PX;
+        background-color: var(--iframe-main-background-color, #fff);
+      }
+    }
+
+    .lg-input {
+      margin-bottom: 10PX;
+
+      .lg-input-a {
+        padding: 0;
+      }
+    }
+
+    .lg_btn {
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .right_reason {
+      width: 100%;
+    }
+  }
+}
+
+table {
+  @include fontFamilyBlock();
+  width: 940PX;
+  margin-bottom: 30PX;
+  border-collapse: unset;
+  border-spacing: 0;
+  border: 1PX solid var(--border-color, #e6e6eb);
+  border-radius: 12PX;
+  font-size: 14PX;
+  overflow: hidden;
+  color: var(--desc-color, #314659);
+
+  thead {
+    th {
+      background: var(--table-th-background-color, #f5f7fa);
+    }
+  }
+
+  th,
+  td {
+    min-width: 160PX;
+    padding: 10PX 24PX;
+    border-right: 1PX solid var(--td-border-color, #f0f1f3);
+    border-bottom: 1PX solid var(--td-border-color, #f0f1f3);
+
+    code {
+      padding: 2PX 5PX;
+      border-radius: 4PX;
+      background: var(--table-code-background-color, #f5f7fa);
+      color: var(--td-code-color, #314659);
+    }
+  }
+}
