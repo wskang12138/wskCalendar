@@ -2,7 +2,6 @@ import { View } from "@tarojs/components";
 import './index.scss'
 import { NavBar } from "@/components";
 import { CommonCalendar } from "@/components/commonCalendar";
-
 import dayjs from "dayjs";
 export default function Index() {
 

@@ -14,6 +14,7 @@
     "noUnusedParameters": false,
     "strictNullChecks": true,
     "sourceMap": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "react-jsx",
@@ -24,6 +25,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src", "./types", "./config"],
+  "include": ["./src", "./types", "./config", "markdown-loader.js"],
   "compileOnSave": false
 }

@@ -1,7 +1,5 @@
-/* eslint-disable import/no-commonjs */
 const marked = require('marked');
 const hljs = require('highlight.js');
-
 module.exports = content => {
   const __jsx = content.match(/```jsx[\s\S]*```/g)?.[0]?.replaceAll(/```jsx|```/g, '') || 'export const Jsx = () => <></>;';
   const __html = marked.marked(content, {
