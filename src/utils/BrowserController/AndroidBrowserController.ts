@@ -1,7 +1,12 @@
 import Taro from "@tarojs/taro";
 import { BrowserController, DeviceType, logSuccessKey } from "./index";
+let pixelRatio = 1
+try {
+    pixelRatio  = Taro.getSystemInfoSync().pixelRatio
+} catch (error) {
 
-const pixelRatio = Taro.getSystemInfoSync().pixelRatio
+}
+
 
 const currentWindow = window.top as any
 

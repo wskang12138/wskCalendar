@@ -10,19 +10,17 @@ import RollupPostCss from 'rollup-plugin-postcss'
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
+import postImport from 'postcss-import';
 import RollPostcssInject2Css from './copy-rollup-postcss-inject-to-css.mjs';
-// import pxtransform from 'postcss-pxtransform';
-// import Uglifyjs from 'uglify-js';
-// import { terser } from 'rollup-plugin-terser'
-// import RollupFont from 'rollup-plugin-font'
-// import RollupReplace from '@rollup/plugin-replace'
-// import constparse from 'postcss-plugin-constparse';
-// import postImport from 'postcss-import';
-// import postPxToVw from 'postcss-px-to-viewport';
-// import RollupCopy from 'rollup-plugin-copy'
+import pxtransform from 'postcss-pxtransform';
+import postPxToVw from 'postcss-px-to-viewport';
+import RollupCopy from 'rollup-plugin-copy'
+
 
 const externalPackages = [
-  /node_modules/
+  /node_modules/,
+  /echarts/,
+  /dayjs/,
 ]
 
 
@@ -56,6 +54,19 @@ export default [
             url: "inline",
             maxSize: 70
           }),
+         postPxToVw({
+            unitToConvert: 'px',
+            viewportWidth: 750,
+            unitPrecision: 5,
+            viewportUnit: 'vw',
+            fontViewportUnit: 'vw',
+            minPixelValue: 1,
+            exclude: [/node_modules/]
+          }),
+          pxtransform({
+            platform: 'h5'
+          }),
+          postImport()
         ]
       }),
       RollPostcssInject2Css(),
@@ -85,75 +96,17 @@ export default [
       RollupImage({
         include: ['**/*.png', '**/*.jpg', '**/*.svg']
       }),
-      // RollupCopy({
-      //   targets: [
-      //     {
-      //       src: [
-      //         './src/components/**/*.scss',
-      //         './src/components/**/*.css',
-      //         './src/images/**/*'
-      //       ],
-      //       dest: './dist/wskCan/style/',
-      //       rename: (_, __, fullPath) =>
-      //         `${fullPath.includes('src/components') ?
-      //           fullPath.replace('src/components', '') :
-      //           fullPath.replace('src/images', 'iconfont')
-      //         }`
-      //     }
-      //   ],
-      // }),
-      // RollupPostCss({ // 可选：处理sass
-      //   extract: false, // 非导出模式
-      //   inject: true,  // 内联模式
-      //   plugins: [
-      //     autoprefixer(),
-      //     cssnano(),
-      //     postImport(),
-      //     postUrl({
-      //       url: "inline",
-      //       maxSize: 70
-      //     }),
-      //     postPxToVw({
-      //       unitToConvert: 'px',
-      //       viewportWidth: 750,
-      //       unitPrecision: 5,
-      //       viewportUnit: 'vw',
-      //       fontViewportUnit: 'vw',
-      //       minPixelValue: 1,
-      //       exclude: [/node_modules/]
-      //     })
-      //     // pxtransform({
-      //     //   platform: 'h5'
-      //     // }),
-      //     // constparse()
-      //   ]
-      // }),
-      // {
-      //   name: 'rollup-my-terser',
-      //   generateBundle(_, bundle) {
-      //     const bundleIdList = Object.keys(bundle)
-      //     bundleIdList.forEach((bundleId) => {
-      //       const bundleItem = bundle[bundleId];
-      //       const code = bundleItem.code;
-      //       // 压缩代码
-      //       if (/.*\.js/.test(bundleId) && !/.*\.scss.*/.test(bundleId) && !/.*\.css.*/.test(bundleId) && typeof code === 'string') {
-      //         bundleItem.code = Uglifyjs.minify(code).code;
-      //         // 删除console.log
-      //         bundleItem.code = bundleItem.code.replaceAll(/console.log\(.*\);/g, '');
-      //         bundleItem.code = bundleItem.code.replaceAll(/console.log\(.*\),/g, '');
-      //       }
-      //     })
-      //   },
-      // }
-      // terser()   // 压缩代码
-      // RollupReplace({
-      //   public: './public', //替换字符用
-      //   include: 'src/mta/taroMta.js', //必定要指定include 不是仅仅引用会替换，所有都会
-      // }),
-      // RollupFont({
-      //   include: [/images\/public.*/],
-      //   svg: 'src/images/public/fonts/icomoon.svg'
-      // }),
+      RollupCopy({
+        targets: [
+          {
+            src: [
+              './README.md',
+            ],
+            dest: './dist/wskCalendar/',
+          }
+        ],
+      }),
+
     ]
   },
   {
