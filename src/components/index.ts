@@ -13,5 +13,3 @@ export * from './tabsCanlendar';
 export * from './weekCalendar';
 export * from './swipeCalendar';
 export * from './commonCalendar';
-//辅助工具
-export * from './utils';

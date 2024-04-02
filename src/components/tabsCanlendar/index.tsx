@@ -1,4 +1,4 @@
-import { createClassName } from "@/components/utils";
+import { createClassName } from "@/utils";
 import { Text, View } from "@tarojs/components";
 import { FC } from "react";
 import "./index.scss";

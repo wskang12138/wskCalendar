@@ -1910,15 +1910,6 @@
     "@tarojs/runtime" "3.6.10"
     "@tarojs/shared" "3.6.10"
 
-"@tarojs/api@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/api/-/api-3.6.11.tgz#5378ee1a3ce6202ca8f978775f77124a7debcf97"
-  integrity sha512-AMjxSYU5yD8ooRiZc4eqdBfiZU1XMWmlcrvme6Tx1305BXYcZJ2Hqu1H+GhbyRkiWG+7eIzz1dKc673dlgh0OQ==
-  dependencies:
-    "@babel/runtime" "^7.14.5"
-    "@tarojs/runtime" "3.6.11"
-    "@tarojs/shared" "3.6.11"
-
 "@tarojs/api@3.6.7":
   version "3.6.7"
   resolved "https://registry.npmmirror.com/@tarojs/api/-/api-3.6.7.tgz#622bf7cb56bf0f56e3739ae2148856815c805e8e"
@@ -1928,15 +1919,15 @@
     "@tarojs/runtime" "3.6.7"
     "@tarojs/shared" "3.6.7"
 
-"@tarojs/cli@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/cli/-/cli-3.6.11.tgz#7206d3252950244e77d97331d12a4b5b82dffad2"
-  integrity sha512-h3lvTzjLEnXUSvIy4L4eGgGXuOnaSc3l2j3k5H+qSGKVehZCYrQgk57FqQm9d8RZgArPmI8mLXkTvhLmQY7zjQ==
+"@tarojs/cli@3.6.10":
+  version "3.6.10"
+  resolved "http://192.168.129.172:4873/@tarojs%2fcli/-/cli-3.6.10.tgz#99994869a7db0f80a9f2f59da43ce8421b726989"
+  integrity sha512-WlJ5UDbqDgUJ4g1DVviQMyG9SxguR81QLavw30/MXLSn/HbSmCeu8ecfeUATltLQFk8k/uXKzWfIQ1Cw2rnorw==
   dependencies:
-    "@tarojs/helper" "3.6.11"
+    "@tarojs/helper" "3.6.10"
     "@tarojs/plugin-doctor" "0.0.10"
-    "@tarojs/service" "3.6.11"
-    "@tarojs/shared" "3.6.11"
+    "@tarojs/service" "3.6.10"
+    "@tarojs/shared" "3.6.10"
     adm-zip "^0.4.13"
     cli-highlight "^2.1.11"
     dotenv "^16.0.3"
@@ -2005,37 +1996,6 @@
   version "3.6.10"
   resolved "https://registry.npmmirror.com/@tarojs/helper/-/helper-3.6.10.tgz#c640edd7190c70c7c3b22bb3368a3b01c2fdf138"
   integrity sha512-Z+rqYU387zPfVs2h++0F1YW3qvIMvmHV9f80CNzpViUGIbUfc2J5DhDs6vooSkHgEbhP8k2jIO0VNC4ugWIWxQ==
-  dependencies:
-    "@babel/core" "^7.14.5"
-    "@babel/parser" "^7.14.5"
-    "@babel/plugin-proposal-decorators" "^7.14.5"
-    "@babel/plugin-proposal-object-rest-spread" "^7.14.5"
-    "@babel/plugin-transform-runtime" "^7.14.5"
-    "@babel/preset-env" "^7.14.5"
-    "@babel/preset-typescript" "^7.14.5"
-    "@babel/register" "^7.14.5"
-    "@babel/runtime" "^7.14.5"
-    "@babel/traverse" "^7.14.5"
-    "@swc/core" "1.3.23"
-    "@swc/register" "^0.1.10"
-    ansi-escapes "^4.3.2"
-    chalk "3.0.0"
-    chokidar "^3.3.1"
-    cross-spawn "^7.0.3"
-    debug "4.3.4"
-    esbuild "^0.14.27"
-    find-yarn-workspace-root "2.0.0"
-    fs-extra "^8.0.1"
-    lodash "^4.17.21"
-    require-from-string "^2.0.2"
-    resolve "^1.22.0"
-    supports-hyperlinks "^2.2.0"
-    yauzl "2.10.0"
-
-"@tarojs/helper@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/helper/-/helper-3.6.11.tgz#60bef555b0f7975820c76bc556a139eaa93b73a3"
-  integrity sha512-r6xUnMPgYKidHE67RcU0CXW5gyJzgC/N6HnwCmth6wY5Yi/x5V79GSnc4L39OQLC8b+t7qnq4+faVkcaV4IXtA==
   dependencies:
     "@babel/core" "^7.14.5"
     "@babel/parser" "^7.14.5"
@@ -2290,14 +2250,6 @@
     "@tarojs/shared" "3.6.10"
     lodash-es "4.17.21"
 
-"@tarojs/runtime@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/runtime/-/runtime-3.6.11.tgz#135e3fec56b83566eaef05b7c3432f249e40187e"
-  integrity sha512-1sRVm6vSp96PSlnBbmuLV6UcIyRu1niLpXDTxWHh3BLao+lCNJDkj2bumlqlxyAU5CjfXvVVsdiVfQ4fxzFTbw==
-  dependencies:
-    "@tarojs/shared" "3.6.11"
-    lodash-es "4.17.21"
-
 "@tarojs/runtime@3.6.7":
   version "3.6.7"
   resolved "https://registry.npmmirror.com/@tarojs/runtime/-/runtime-3.6.7.tgz#1291f8712a33db62a0816384414213ff1bd8ca6a"
@@ -2314,21 +2266,6 @@
     "@tarojs/helper" "3.6.10"
     "@tarojs/shared" "3.6.10"
     "@tarojs/taro" "3.6.10"
-    joi "^17.6.0"
-    lodash "^4.17.21"
-    ora "^5.0.0"
-    resolve "^1.22.0"
-    tapable "^1.1.3"
-    webpack-merge "^4.2.2"
-
-"@tarojs/service@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/service/-/service-3.6.11.tgz#ef87a7a529011c4163493a7c0a4c4d3c4838c838"
-  integrity sha512-W1ceF6+vWwOBCOyPUmCYiWtsl91GSbBV2Tdey5dvRAzSdghvSBgp3geRCvKW+g88ROdJvkRDx0CDA2t6J39OpQ==
-  dependencies:
-    "@tarojs/helper" "3.6.11"
-    "@tarojs/shared" "3.6.11"
-    "@tarojs/taro" "3.6.11"
     joi "^17.6.0"
     lodash "^4.17.21"
     ora "^5.0.0"
@@ -2355,11 +2292,6 @@
   version "3.6.10"
   resolved "https://registry.npmmirror.com/@tarojs/shared/-/shared-3.6.10.tgz#93711c0d3976c7e78c1caa9821dedd4896f9e589"
   integrity sha512-1IS3SuoF72fGVoAwEarYaPnQctDTWO5S0Udm0ppQshmuJJ/3a2rcQNyN+aQW7aFewMsnhiWpLXKQG6xq2EaRZA==
-
-"@tarojs/shared@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/shared/-/shared-3.6.11.tgz#efd00c3083668f1cfc46fb828d5e9f16d531d849"
-  integrity sha512-gAhhKUWL0c/JJm36lZ69tY0fn3n3I4wl02KSnxdz2JNmqSlnth6fQhBQG1NpsEfzM5WXRgPMhr01wCOqyhBkvA==
 
 "@tarojs/shared@3.6.7":
   version "3.6.7"
@@ -2394,15 +2326,6 @@
     "@tarojs/taro" "3.6.10"
     loader-utils "^1.2.3"
 
-"@tarojs/taro-loader@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/taro-loader/-/taro-loader-3.6.11.tgz#d74cd5d5c9163e390cc872388565ddf3697bd917"
-  integrity sha512-OO4MyLIbIjAbl0+qwsfdwWzsp/G/bM53Eeq26NZzq/6HhY7LiMlcJ1D/W0pIuP1s5Zjtqjbc+M3DwoxT7aYeNA==
-  dependencies:
-    "@tarojs/helper" "3.6.11"
-    "@tarojs/taro" "3.6.11"
-    loader-utils "^1.2.3"
-
 "@tarojs/taro@3.6.10":
   version "3.6.10"
   resolved "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.6.10.tgz#61a067f67a59628108b28f105cd2460edab9804f"
@@ -2410,14 +2333,6 @@
   dependencies:
     "@tarojs/api" "3.6.10"
     "@tarojs/runtime" "3.6.10"
-
-"@tarojs/taro@3.6.11":
-  version "3.6.11"
-  resolved "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.6.11.tgz#9b1e12492abf1f019aa3b143f3fd9686763ac14e"
-  integrity sha512-wAqvGRuOjEdIfpRn+7APimf00RjQBOmkhK1ZF67iRUPw6kUBrXfDtmoserVTarlPEj0DPt2I8vWGN7tas+cWlQ==
-  dependencies:
-    "@tarojs/api" "3.6.11"
-    "@tarojs/runtime" "3.6.11"
 
 "@tarojs/taro@3.6.7":
   version "3.6.7"
@@ -11608,16 +11523,7 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0":
-  version "4.2.3"
-  resolved "https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
-  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-  dependencies:
-    emoji-regex "^8.0.0"
-    is-fullwidth-code-point "^3.0.0"
-    strip-ansi "^6.0.1"
-
-string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.2, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.2, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -11700,14 +11606,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.npmmirror.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
-  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-  dependencies:
-    ansi-regex "^5.0.1"
-
-strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.npmmirror.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -12949,7 +12848,7 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -12962,15 +12861,6 @@ wrap-ansi@^6.0.1:
   version "6.2.0"
   resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
-  dependencies:
-    ansi-styles "^4.0.0"
-    string-width "^4.1.0"
-    strip-ansi "^6.0.0"
-
-wrap-ansi@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
-  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"

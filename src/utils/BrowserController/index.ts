@@ -3,7 +3,7 @@ import { AndroidBrowserController } from "./AndroidBrowserController";
 import { IosBrowserController } from "./IosBrowserController";
 import { WeappBrowserController } from "./WeappBrowserController";
 import { WXWebViewController } from "./WXWebViewController";
-import { NavigateToMiniProgramParams, OpenFileParams } from "@/components/utils/WxSdk/type";
+import { NavigateToMiniProgramParams, OpenFileParams } from "@/utils/WxSdk/type";
 
 const ENV_TYPE = Taro.ENV_TYPE;
 

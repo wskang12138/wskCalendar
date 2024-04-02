@@ -1,6 +1,6 @@
 import {Component, CSSProperties, ReactNode} from "react";
 import classNames, {Argument} from "classnames"
-import {paddingPrefix} from "../components/utils/classNameUtils";
+import {paddingPrefix} from "../utils/classNameUtils";
 
 export interface BaseProps {
   className?: string;

@@ -3,7 +3,7 @@ import { Component, ReactNode, memo } from "react"
 import "./index.scss"
 import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
-import { transformToRemOrRpx } from "@/components/utils";
+import { transformToRemOrRpx } from "@/utils";
 import { CalendarDProps, CalendarDState, DayRendarProps } from "./types";
 
 let CalendarDId = 0

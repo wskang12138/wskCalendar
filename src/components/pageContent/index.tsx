@@ -7,7 +7,7 @@ import './index.scss'
 import Taro from "@tarojs/taro";
 import { FlexFillView } from "../flexFillView";
 import { PageHeaderTitle } from "../pageHeaderTitle";
-import { createClassName } from "@/components/utils";
+import { createClassName } from "@/utils";
 import { RefreshPage } from "../refreshPage";
 
 const { rootClassNames, classNames } = createClassName("refreshable-page-container")
