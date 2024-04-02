@@ -20,7 +20,7 @@ export const componentsSidebarTabs = [
     link: ''
   },
   {
-    title: 'Button 按钮',
-    link: '/website/components/button',
+    title: 'PopCalendar 弹窗日历',
+    link: '/website/components/popCalendar',
   },
 ]

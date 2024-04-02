@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import Taro from "@tarojs/taro";
 import { View, Image } from '@tarojs/components';
-import { getBrowserController } from '@/utils/BrowserController';
+import { getBrowserController } from '@/components/utils/BrowserController';
 import { NavBarProps } from './types';
 import ic_back from '../../images/back.svg';
 import ic_home from '../../images/home.svg';

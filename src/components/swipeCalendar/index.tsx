@@ -2,7 +2,7 @@ import { ITouchEvent, View } from "@tarojs/components";
 import { Component, memo } from "react";
 import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
-import { transformToRemOrRpx1 } from "../../utils";
+import { transformToRemOrRpx1 } from "../utils";
 import "./index.scss"
 import { CalendarProps, CalendarState, DayType } from "./types";
 

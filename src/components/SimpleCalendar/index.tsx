@@ -3,7 +3,7 @@ import { View } from "@tarojs/components";
 import dayjs from "dayjs";
 import { FC, useMemo } from "react";
 import "./index.scss";
-import { createClassName } from "@/utils";
+import { createClassName } from "@/components/utils";
 import { getRecentMonth ,DayItemApi, getMonthInfo,} from "@/utils/calendar";
 import { MonthPropsType, PropsType } from "./types";
 

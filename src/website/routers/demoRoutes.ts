@@ -1,11 +1,11 @@
 
-import { demo as Tabs_demo } from '@/website/components/navBar/doc';
+import { demo as popCalendar_demo } from '@/website/components/popCalendar/doc';
 
 
 // 示例路由配置
 export const demosRoutes = [
-  ...Tabs_demo.map((item, itemIndex) => ({
-    path: `delimiter/demo${itemIndex}`,
+  ...popCalendar_demo.map((item, itemIndex) => ({
+    path: `popCalendar/demo${itemIndex}`,
     component: item
   })),
 ]

@@ -9,7 +9,7 @@ const QuickStart = lazy(() => import('@/website/guide/quick-start'));
 const ColorStandard = lazy(() => import('@/website/guide/color-standard'));
 
 // 组件
-const NavBar = lazy(() => import('@/website/components/navBar'));
+const PopCalendar = lazy(() => import('@/website/components/popCalendar'));
 
 // 页面路由配置
 export const websiteRoutes = [
@@ -36,8 +36,8 @@ export const websiteRoutes = [
     component: ComponentPages,
     subRoutes: [
       {
-        path: 'navBar',
-        component: NavBar
+        path: 'popCalendar',
+        component: PopCalendar
       },
     ]
   },
