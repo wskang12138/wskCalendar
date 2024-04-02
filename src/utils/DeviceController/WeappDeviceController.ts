@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro"
-import { DeviceController } from "./index";
+import { DeviceController } from "../types";
 
 export class WeappDeviceController implements DeviceController {
   scanCode(): Promise<string> {

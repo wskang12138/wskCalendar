@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro";
-import { BrowserController, DeviceType } from "./index";
+import { BrowserController, DeviceType } from "./../types";
 import { concatParamsStr } from "../WxSdk";
 
 const currentWindow = window as any

@@ -23,4 +23,8 @@ export const componentsSidebarTabs = [
     title: 'PopCalendar 弹窗日历',
     link: '/website/components/popCalendar',
   },
+  {
+    title: 'SwipeCalendar 滑动日历',
+    link: '/website/components/swipeCalendar',
+  },
 ]

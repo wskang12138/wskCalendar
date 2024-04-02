@@ -25,6 +25,9 @@ export interface AnchorProps {
 
 export class Anchor extends Component<AnchorProps> {
 
+  constructor(props){
+       super(props)
+  }
   componentDidMount() {
     setTimeout(() => {
       const { props: { anchorList, activeHref }, bindScrollEvent, getScrollInfo } = this;

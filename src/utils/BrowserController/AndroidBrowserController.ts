@@ -1,5 +1,6 @@
 import Taro from "@tarojs/taro";
-import { BrowserController, DeviceType, logSuccessKey } from "./index";
+import { BrowserController, DeviceType, logSuccessKey } from "../types";
+
 let pixelRatio = 1
 try {
     pixelRatio  = Taro.getSystemInfoSync().pixelRatio

@@ -16,7 +16,7 @@ export default function Index() {
       <NavBar title='滑动日历' bgHeight={106} />
       <View className='pages_content'>
         <SwipeCalendar
-          onChange={(day) => { weekChange(day); }}  />
+          onChange={(day: string) => { weekChange(day); }}  />
         <View className="">{day}</View>
       </View>
     </View >

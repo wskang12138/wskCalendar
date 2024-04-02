@@ -1,4 +1,4 @@
-import { BrowserController, DeviceType, logSuccessKey } from "./index";
+import { BrowserController, DeviceType, logSuccessKey } from "./../types";
 
 const currentWindow = window.top as any
 

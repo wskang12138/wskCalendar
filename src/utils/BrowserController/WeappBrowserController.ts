@@ -1,5 +1,5 @@
 import Taro from "@tarojs/taro"
-import { BrowserController, DeviceType } from "./index";
+import { BrowserController, DeviceType } from "./../types";
 export class WeappBrowserController implements BrowserController {
   appVersion(): string {
     return "";

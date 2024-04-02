@@ -8,7 +8,12 @@ export * from './WxSdk'
 export * from './classNameUtils'
 
 export const transformToRemOrRpx1 = function (size) {
-  const width = Taro.getSystemInfoSync().windowWidth;
+  let width = 1
+  try {
+    width = Taro.getSystemInfoSync().windowWidth;
+  } catch (error) {
+
+  }
   const pixelRatio = 750 / width;
   if (process.env.TARO_ENV === 'weapp') {
     return size * pixelRatio + "rpx";

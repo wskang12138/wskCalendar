@@ -22,14 +22,29 @@ const getTimeFile = () => {
   }
 };
 // 文件写入内容
-const fileWriteContent = (data) => {
+const fileWriteContent = (data) => { //写入type:module
   try {
+    // 解析 JSON 字符串为对象
+    let jsonData = JSON.parse(data);
+    // 新建对象
+    let newJsonData = {};
+    // 遍历旧对象的键
+    for (let key in jsonData) {
+      // 把每个键/值对添加到新对象
+      newJsonData[key] = jsonData[key];
+      // 在 description 后面添加新的键/值对
+      if (key === "description") {
+        newJsonData["type"] = "module";
+      }
+    }
+    // 把对象转回 JSON 字符串，并保持原来的格式
+    data = JSON.stringify(newJsonData, null, 2);
     fs.writeFile(filePath, Buffer.from(data, 'utf-8'), "utf-8", (err) => {
       if (err) {
         return console.warn(`🚀[developer 🌞🔥 (っ °Д °;)っ]🌈 ~ file: buildJson.js:31 ~ fs.writeFile ~ err: 写入文件失败`, err);
       } else {
-        return console.warn(`🚀[developer 🌞🔥 (っ °Д °;)っ]🌈 ~ : 
-        \b ✅ json写入成功, 请进入目录 ${chalk.red("cd dist/wskCalendar")} 进行发布新版本: 
+        return console.warn(`🚀[developer 🌞🔥 (っ °Д °;)っ]🌈 ~ :
+        \b ✅ json写入成功, 请进入目录 ${chalk.red("cd dist/wskCalendar")} 进行发布新版本:
         \b ${chalk.green("npm publish")}
         \b 返回：
         ${chalk.green("cd ../..")}

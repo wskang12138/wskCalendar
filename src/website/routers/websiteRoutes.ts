@@ -10,6 +10,9 @@ const ColorStandard = lazy(() => import('@/website/guide/color-standard'));
 
 // 组件
 const PopCalendar = lazy(() => import('@/website/components/popCalendar'));
+const SwipeCalendar =  lazy(()=> import('@/website/components/swipeCalendar'));
+
+
 
 // 页面路由配置
 export const websiteRoutes = [
@@ -38,6 +41,10 @@ export const websiteRoutes = [
       {
         path: 'popCalendar',
         component: PopCalendar
+      },
+      {
+        path: 'swipeCalendar',
+        component: SwipeCalendar
       },
     ]
   },

@@ -1,12 +1,9 @@
 import Taro from "@tarojs/taro";
+import { DeviceController } from "../types";
 import { AndroidDeviceController } from "./AndroidDeviceController";
 import { IosDeviceController } from "./IosDeviceController";
 import { WeappDeviceController } from "./WeappDeviceController";
 
-export interface DeviceController {
-  scanCode(): Promise<string>
-
-}
 
 
 let deviceController: DeviceController | null = null

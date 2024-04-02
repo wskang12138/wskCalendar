@@ -19,7 +19,6 @@ import RollupCopy from 'rollup-plugin-copy'
 
 const externalPackages = [
   /node_modules/,
-  /echarts/,
   /dayjs/,
 ]
 

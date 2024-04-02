@@ -3,37 +3,11 @@ import { AndroidBrowserController } from "./AndroidBrowserController";
 import { IosBrowserController } from "./IosBrowserController";
 import { WeappBrowserController } from "./WeappBrowserController";
 import { WXWebViewController } from "./WXWebViewController";
-import { NavigateToMiniProgramParams, OpenFileParams } from "@/utils/WxSdk/type";
+import { BrowserController, DeviceType } from '../types';
 
 const ENV_TYPE = Taro.ENV_TYPE;
 
-export type DeviceType = "ios" | "android" | "web" | "weapp" | "wx-webview";
 
-export const logSuccessKey = "__APP_ONLY_LOG_SUCCESS_KEY__"
-
-export interface BrowserController {
-  deviceType(): DeviceType
-  getStatusBarHeight: () => number
-  getFooterHeight: () => number
-  back: () => void
-  getDeviceId: () => string
-  getDeviceIp: () => string
-  openFileReader: (path: string) => boolean
-  goHome: () => void
-  logout: () => void
-  logSuccess(): void
-  cacheSize: () => number
-  clearCache: () => void
-  appVersion: () => string
-  hasNewVersion: () => boolean
-  gotoUpdate: () => void
-  getAppName: () => string
-  getEnvironmentVariable: (key: string) => string
-  saveImageToPhotosAlbum(path: string): Promise<void>
-
-  openFileForWebview: (wx: any, params: OpenFileParams) => void
-  navigateToMiniProgramForWebview: (wx: any, params: NavigateToMiniProgramParams) => void
-}
 
 let browserController: BrowserController | null = null
 

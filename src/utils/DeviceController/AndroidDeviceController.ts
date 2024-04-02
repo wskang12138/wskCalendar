@@ -1,4 +1,4 @@
-import { DeviceController } from "./index";
+import { DeviceController } from "../types";
 
 interface Callback {
   resolve(string): void

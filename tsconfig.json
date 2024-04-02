@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "types": ["node"],
-    "target": "ES2017",
+    "target": "ES2015",
     "module": "ES2020",
     "removeComments": false,
     "preserveConstEnums": true,
@@ -20,7 +20,9 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": ["src/types"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "paths": {
       "@/*": ["src/*"]
     }
