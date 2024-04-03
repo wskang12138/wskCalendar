@@ -7,7 +7,7 @@ import "../index.scss";
 
 export const Jsx = () => {
 
- const [date,setDate] = useState('')
+ const [date,setDate] = useState(dayjs().format("YYYY-MM-DD"))
 
   return (
     <View className="iframe__viewport">

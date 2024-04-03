@@ -7,7 +7,7 @@ import '../index.scss';
 
 export const Jsx = () => {
 
-  const [day, setDay] = useState(dayjs().format('YYYY-yy-MM'))
+  const [day, setDay] = useState(dayjs().format('YYYY-MM-DD'))
   function weekChange(day) {
     setDay(day)
   }

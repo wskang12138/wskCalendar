@@ -36,6 +36,9 @@ const fileWriteContent = (data) => { //写入type:module
       if (key === "description") {
         newJsonData["type"] = "module";
       }
+      if (key === "dependencies") {
+         delete newJsonData["dependencies"]?.["wskcalendar"] //删除自己的依赖包防止下载套娃
+      }
     }
     // 把对象转回 JSON 字符串，并保持原来的格式
     data = JSON.stringify(newJsonData, null, 2);

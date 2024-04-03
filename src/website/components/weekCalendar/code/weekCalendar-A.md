@@ -7,7 +7,7 @@ import '../index.scss';
 import { getRecentMonths } from "@/utils/calendar";
 
 export const Jsx = () => {
- const [date,setDate] = useState('')
+ const [date,setDate] = useState('本周')
  const [datas, setDatas] = useState([
     {
       date: "01-07",
@@ -40,14 +40,14 @@ export const Jsx = () => {
         isSelected: item.date === _data.date,
       }));
       setDatas(newDatas);
-      setDate(_data.date)
+      setDate(_data.week)
     },
     [datas]
   );
 
   return (
     <View className="iframe__viewport">
-      <View className="viewport__title">选项日历</View>
+      <View className="viewport__title">星期日历</View>
       <NavBar title='选项日历' bgHeight={106} center/>
       <View className="viewport__main tabs">
         <WeekCalendar
