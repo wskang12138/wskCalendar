@@ -7,6 +7,7 @@ import '../index.scss';
 import { getRecentMonths } from "@/utils/calendar";
 
 export const Jsx = () => {
+ const [date,setDate] = useState('')
  const [datas, setDatas] = useState([
     {
       date: "01-07",
@@ -34,12 +35,12 @@ export const Jsx = () => {
 
   const changeDate = useCallback(
     (_data) => {
-      // 重置并更新isSelected
       const newDatas = datas.map((item) => ({
         ...item,
         isSelected: item.date === _data.date,
       }));
       setDatas(newDatas);
+      setDate(_data.date)
     },
     [datas]
   );
@@ -54,6 +55,7 @@ export const Jsx = () => {
           onChange={changeDate}
         />
       </View>
+       <View className="calendar__page">{ date || "请选择日期"}</View>
     </View>
   );
 };

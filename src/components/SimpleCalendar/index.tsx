@@ -7,8 +7,6 @@ import { createClassName } from "@/utils";
 import { getRecentMonth ,DayItemApi, getMonthInfo,} from "@/utils/calendar";
 import { MonthPropsType, PropsType } from "./types";
 
-
-
 const { rootClassNames, classNames } = createClassName("simple-calendar");
 
 const MonthItem: FC<MonthPropsType> = (props) => {
@@ -79,10 +77,7 @@ const MonthItem: FC<MonthPropsType> = (props) => {
 export const SimpleCalendar: FC<PropsType> = (props) => {
   /* 属性 */
   const { startDate, disableDate, onDayClick, data } = props;
-
-  /* hook */
-
-  /* render */
+  
   return (
     <View className={rootClassNames("")}>
       {getRecentMonth(3).map((m) => (

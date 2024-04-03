@@ -19,8 +19,8 @@ export const Jsx = () => {
       <View className="viewport__main swipe">
         <SwipeCalendar
           onChange={(day) => { weekChange(day); }}  />
-        <View className="">{day}</View>
       </View>
+      <View className="calendar__page">{day || "请选择日期"}</View>
     </View>
   );
 };

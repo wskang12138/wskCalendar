@@ -22,7 +22,7 @@ export const Jsx = () => {
         >
           点击
         </Button>
-        <View className="time">{showTime}</View>
+         <View className="calendar__page">{showTime || "请选择日期"}</View>
         <CalendarPop
           canCancel={false}
           isOpen={isOpen}

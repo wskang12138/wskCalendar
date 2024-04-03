@@ -10,5 +10,4 @@ export interface TabItemDataApi {
   value: number | string | undefined;
   label: string;
   subLabel?: string;
-  info?: any;
 }

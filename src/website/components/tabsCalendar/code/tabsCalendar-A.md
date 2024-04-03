@@ -33,8 +33,8 @@ export const Jsx = () => {
             if (i && i.value !== month) setMonth(i.value);
           }}
         />
-        <View className="">{month}</View>
       </View>
+      <View className="calendar__page">{month || "请选择日期"}</View>
     </View>
   );
 };
