@@ -9,10 +9,12 @@ const QuickStart = lazy(() => import('@/website/guide/quick-start'));
 const ColorStandard = lazy(() => import('@/website/guide/color-standard'));
 
 // 组件
+const CommonCalendar = lazy(() => import('@/website/components/commonCalendar'));
 const PopCalendar = lazy(() => import('@/website/components/popCalendar'));
 const SwipeCalendar =  lazy(()=> import('@/website/components/swipeCalendar'));
-
-
+const SimpleCalendar =  lazy(()=> import('@/website/components/simpleCalendar'));
+const TabsCalendar = lazy(() => import('@/website/components/tabsCalendar'));
+const WeekCalendar = lazy(() => import('@/website/components/weekCalendar'));
 
 // 页面路由配置
 export const websiteRoutes = [
@@ -39,12 +41,28 @@ export const websiteRoutes = [
     component: ComponentPages,
     subRoutes: [
       {
+        path: 'commonCalendar',
+        component: CommonCalendar
+      },
+      {
         path: 'popCalendar',
         component: PopCalendar
       },
       {
         path: 'swipeCalendar',
         component: SwipeCalendar
+      },
+      {
+        path: 'simpleCalendar',
+        component: SimpleCalendar
+      },
+       {
+        path: 'tabsCalendar',
+        component: TabsCalendar
+      },
+      {
+        path: 'weekCalendar',
+        component: WeekCalendar
       },
     ]
   },

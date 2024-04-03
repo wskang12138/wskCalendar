@@ -65,7 +65,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.22.3",
     "weixin-js-sdk": "^1.6.5",
-    "wskcalendar": "1.0.0-beta.7"
+    "wskcalendar": "1.0.0-beta.8"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",

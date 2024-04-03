@@ -1,9 +1,9 @@
 ```jsx
 import { Button, View } from "@tarojs/components";
-import '../index.scss'
 import { NavBar,SwipeCalendar } from "wskcalendar";
 import { useState } from "react";
 import dayjs from "dayjs";
+import '../index.scss';
 
 export const Jsx = () => {
 
@@ -16,7 +16,7 @@ export const Jsx = () => {
     <View className="iframe__viewport">
       <View className="viewport__title">滑动日历</View>
       <NavBar title='弹窗日历' bgHeight={106} center/>
-      <View className="viewport__main">
+      <View className="viewport__main swipe">
         <SwipeCalendar
           onChange={(day) => { weekChange(day); }}  />
         <View className="">{day}</View>

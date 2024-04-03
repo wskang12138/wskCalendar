@@ -1,12 +1,12 @@
-import { Jsx as JsxA, __html as htmlA, __code as codeA } from '../code/swipeCalendar-A.md';
+import { Jsx as JsxA, __html as htmlA, __code as codeA } from '../code/simpleCalendar-A.md';
 import { __html as props } from './props.md';
 
 export const doc = {
-  title: 'swipeCalendar 滑动日历',
-  description: '需要展示滑动日历的时候。',
-  whenUse: '适用于展示滑动日历',
+  title: 'simpleCalendar 简单日历',
+  description: '需要展示简单日历的时候。',
+  whenUse: '适用于展示简单日历',
   props: props,
-  src: 'swipeCalendar/demo',
+  src: 'simpleCalendar/demo',
   preview: [
     {
       html: htmlA,

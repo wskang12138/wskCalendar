@@ -1,5 +1,4 @@
 import { Jsx as JsxA, __html as htmlA, __code as codeA } from '../code/popCalendar-A.md';
-import { Jsx as JsxB, __html as htmlB, __code as codeB } from '../code/popCalendar-B.md';
 import { __html as props } from './props.md';
 
 export const doc = {
@@ -12,19 +11,12 @@ export const doc = {
     {
       html: htmlA,
       code: codeA,
-      subTitle: '单选样式',
+      subTitle: '常规样式',
       supplement: '样式有点难调，可以F12慢慢试'
-    },
-    {
-      html: htmlB,
-      code: codeB,
-      subTitle: '范围选择',
-      supplement: ''
-    },
+    }
   ]
 }
 
 export const demo = [
-  JsxA,
-  JsxB,
+  JsxA
 ]
