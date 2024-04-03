@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { View } from '@tarojs/components';
 import { websiteRoutes, demosRoutes } from '@/website/routers';
 import './index.scss';
@@ -10,7 +10,7 @@ const Demos = lazy(() => import('./../demos/index'));
 function Index() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <View>
         <Suspense fallback={<View className='lazy-fallback'>loading...</View>}>
           <Routes>
@@ -52,7 +52,7 @@ function Index() {
           </Routes>
         </Suspense>
       </View>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

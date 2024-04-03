@@ -50,7 +50,7 @@ const config = {
   },
   h5: {
     esnextModules: ['wskcanlendar'],
-    publicPath: '/',
+    publicPath: process.env.NODE_ENV === 'development'?'/':'./',
     staticDirectory: 'static',
     postcss: {
       autoprefixer: {
