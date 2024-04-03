@@ -1,5 +1,6 @@
 export default defineAppConfig({
   pages: [
+    "pages/website/index",
     "pages/index/index",
     "pages/popCalendar/index",
     "pages/swipeCalendar/index",
@@ -7,7 +8,6 @@ export default defineAppConfig({
     "pages/simpleCalendar/index",
     "pages/tabsCalendar/index",
     "pages/commonCalendar/index",
-    "pages/website/index",
   ],
   window: {
     backgroundTextStyle: "light",

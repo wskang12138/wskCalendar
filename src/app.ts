@@ -9,6 +9,7 @@ function App({ children }: PropsWithChildren<any>) {
   })
   useDidShow(() => {
     document.title = 'wskCalendar';
+     window.history.replaceState(null, '', window.location.href.replace('pages/website/index', ''));
   })
 
   // children 是将要会渲染的页面
