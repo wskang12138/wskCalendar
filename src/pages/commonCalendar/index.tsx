@@ -13,10 +13,12 @@ export default function Index() {
           <CommonCalendar
             selectedDay={dayjs().format("YYYY-MM-DD")}
             onDayChange={(value) => {
-            let choDate = dayjs(value).format('YYYY-MM-DD')
+              let choDate = dayjs(value).format('YYYY-MM-DD')
+              console.log(choDate,8888)
             }}
-           getOrderStatus={(date)=>{}}
-           choseDay={(chose)=>{}}
+            getOrderStatus={(date)=>{}}
+            choseDay={(chose) => {
+            }}
            />
         </View>
       </View>

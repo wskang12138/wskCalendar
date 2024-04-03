@@ -3,7 +3,6 @@ import { Component, ReactNode, memo } from "react"
 import "./index.scss"
 import dayjs from "dayjs"
 import Taro from "@tarojs/taro";
-import { transformToRemOrRpx } from "@/utils";
 import { CalendarDProps, CalendarDState, DayRendarProps } from "./types";
 
 let CalendarDId = 0
@@ -15,7 +14,6 @@ export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
     constructor(props) {
         super(props)
         const centerDay = this.props.selectedDay ? dayjs(this.props.selectedDay) : dayjs()
-        console.log('centerDay', centerDay);
         this.state = {
             months: this.reCreateMonths(this.props.selectedDay),
             yearMonth: `${centerDay.year()}-${centerDay.month() + 1}`,
@@ -121,7 +119,7 @@ export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
     }
 
     render() {
-        const translateX = transformToRemOrRpx(-this.state.scrollLeft)
+        const translateX = -this.state.scrollLeft
         let { onRenderingTime } = this.props
         // console.log(this.state.selectedDay);
         return (
@@ -135,7 +133,7 @@ export class CommonCalendar extends Component<CalendarDProps, CalendarDState> {
                 </View>
                 <WeekTitle />
                 <View className="common-calendar-d-body">
-                    <View className="common-calendar-d-body-panel" style={{ transform: `translateX(${translateX})`, transition: this.state.transition }}>
+                    <View className="common-calendar-d-body-panel"  style={{ transform: `translateX(${-this.state.scrollLeft}px)`, transition: this.state.transition }}>
                         {
                             this.state.months.map(item => <MonthBody markDays={this.props.markDays} onChangeSelectedDay={(selectedDay) => this.changeSelectedDay(selectedDay)} selectedDay={this.state.selectedDay} key={`${item.year}-${item.month}`} year={item.year} month={item.month} onRenderingTime={onRenderingTime} />)
                         }

@@ -568,3 +568,28 @@ table {
     }
   }
 }
+
+
+.flex-fill-view-root .flex-fill-view-wrapper,.taro_page, .taro_page #index .doc .doc__previewer .previewer__detail .detail__code{
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+  }
+
+  /* 修改滚动条的形状 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #E6E6E6;
+  }
+
+  /* 修改滚动条轨道的形状 */
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: transparent;
+  }
+}

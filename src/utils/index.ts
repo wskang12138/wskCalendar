@@ -33,10 +33,11 @@ export const transformToRemOrRpx1 = function (size) {
 };
 
 
-export const transformToRemOrRpx = function (size: number): string {
-  var transSize = "0";
+export const transformToRemOrRpx =   function (size: number): string {
+  let transSize = "0";
   Taro.getSystemInfo({
     success: (res) => {
+      console.log(res,888)
       const width = res.windowWidth;
       const pixelRatio = 750 / width;
       if (process.env.TARO_ENV === "weapp") {
