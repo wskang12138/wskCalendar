@@ -1,6 +1,6 @@
 {
   "name": "wskcalendar",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0-beta.10",
   "private": false,
   "description": "wskCalendar",
   "templateInfo": {
@@ -65,7 +65,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.22.3",
     "weixin-js-sdk": "^1.6.5",
-    "wskcalendar": "1.0.0-beta.8"
+    "wskcalendar": "1.0.0-beta.9"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
