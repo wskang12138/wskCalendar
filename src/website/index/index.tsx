@@ -24,7 +24,7 @@ function Index() {
 
   // 切换日间/夜间模式
   const handleNightMode = useCallback((_isNightMode: boolean) => {
-    localStorage.setItem('lancoo-ui-theme', _isNightMode ? 'night' : 'day');
+    localStorage.setItem('theme', _isNightMode ? 'night' : 'day');
     isNightMode !== _isNightMode && setIsNightMode(_isNightMode);
   }, [isNightMode])
 
@@ -34,7 +34,7 @@ function Index() {
     // 监听切换模式
     event.on('handleNightMode', handleNightMode);
     // 根据缓存切换主题
-    const theme = localStorage.getItem('lancoo-ui-theme');
+    const theme = localStorage.getItem('theme');
     if (theme === 'night' && !isNightMode) {
       setIsNightMode(true);
     }
