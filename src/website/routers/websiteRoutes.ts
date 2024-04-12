@@ -15,6 +15,7 @@ const SwipeCalendar =  lazy(()=> import('@/website/components/swipeCalendar'));
 const SimpleCalendar =  lazy(()=> import('@/website/components/simpleCalendar'));
 const TabsCalendar = lazy(() => import('@/website/components/tabsCalendar'));
 const WeekCalendar = lazy(() => import('@/website/components/weekCalendar'));
+const TimeSelectCalendar = lazy(() => import('@/website/components/timeSelectCalendar'));
 
 // 页面路由配置
 export const websiteRoutes = [
@@ -63,6 +64,10 @@ export const websiteRoutes = [
       {
         path: 'weekCalendar',
         component: WeekCalendar
+      },
+      {
+        path: 'timeSelectCalendar',
+        component: TimeSelectCalendar
       },
     ]
   },

@@ -4,6 +4,8 @@ import { demo as swipeCalendar_demo } from "@/website/components/swipeCalendar/d
 import { demo as simpleCalendar_demo } from "@/website/components/simpleCalendar/doc";
 import { demo as tabsCalendar_demo } from "@/website/components/tabsCalendar/doc";
 import { demo as weekCalendar_demo } from '@/website/components/weekCalendar/doc';
+import { demo as timeSelectCalendar_demo } from '@/website/components/timeSelectCalendar/doc';
+
 // 示例路由配置
 export const demosRoutes = [
     ...commonCalendar_demo.map((item, itemIndex) => ({
@@ -28,6 +30,10 @@ export const demosRoutes = [
   })),
     ...weekCalendar_demo.map((item, itemIndex) => ({
     path: `weekCalendar/demo${itemIndex}`,
+    component: item,
+    })),
+   ...timeSelectCalendar_demo.map((item, itemIndex) => ({
+    path: `timeSelectCalendar/demo${itemIndex}`,
     component: item,
   })),
 ];

@@ -13,3 +13,7 @@ export * from './tabsCanlendar';
 export * from './weekCalendar';
 export * from './swipeCalendar';
 export * from './commonCalendar';
+//时间
+export * from './timeSelectCalendar';
+export * from './timeSelectCalendar/timeAselect';
+export * from './timeSelectCalendar/timeBselect';

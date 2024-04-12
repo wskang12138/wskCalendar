@@ -42,4 +42,8 @@ export const componentsSidebarTabs = [
     title: 'WeekCalendar 星期日历',
     link: '/website/components/weekCalendar',
   },
+   {
+    title: 'TimeSelect 时间选择日历',
+    link: '/website/components/timeSelectCalendar',
+  },
 ]

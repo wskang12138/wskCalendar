@@ -8,6 +8,7 @@ export default defineAppConfig({
     "pages/simpleCalendar/index",
     "pages/tabsCalendar/index",
     "pages/commonCalendar/index",
+    "pages/timeSelectCalendar/index",
   ],
   window: {
     backgroundTextStyle: "light",

@@ -1,1 +1,0 @@
-"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[734],{"5734":function(e,n,s){s.r(n);var t=s(6334),i=s(6008),r=s(5513);n.default=function Index(){return(0,r.jsx)(i.View,{"id":"iframe","children":(0,r.jsx)(t.Outlet,{})})}}}]);
