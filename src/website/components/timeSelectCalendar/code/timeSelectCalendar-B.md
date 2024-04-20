@@ -1,9 +1,8 @@
 ```jsx
 import { Button, View } from "@tarojs/components";
-import { NavBar} from "wskcalendar";
+import { NavBar ,TimeBSelect} from "wskcalendar";
 import { useState,useEffect,useCallback } from "react";
 import dayjs from "dayjs";
-import { TimeBSelect } from '@/components'
 import '../index.scss';
 
 export const Jsx = () => {
@@ -15,7 +14,7 @@ export const Jsx = () => {
   return (
     <View className="iframe__viewport">
       <View className="viewport__title">时间日历</View>
-      <NavBar title='选项日历' bgHeight={106} center/>
+      <NavBar title='选项时间' bgHeight={106} center/>
       <View className="viewport__main tabs">
         <Button
           style={{ width: '150px' }}

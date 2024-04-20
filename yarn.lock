@@ -12855,10 +12855,10 @@ ws@^8.11.0, ws@^8.13.0, ws@^8.4.2:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.16.0.tgz#d1cd774f36fbc07165066a60e40323eab6446fd4"
   integrity sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==
 
-wskcalendar@1.0.0-beta.9:
-  version "1.0.0-beta.9"
-  resolved "https://registry.yarnpkg.com/wskcalendar/-/wskcalendar-1.0.0-beta.9.tgz#bbeb1927315768a13a4bd9f65f2f1892fcd1f760"
-  integrity sha512-7r/Fhf0tRv6Nq3qJRviSTnV2bV/cbZVTJvHL8bQ5gLC6SzH0nmwLbyl7g/CfxvP/ExThC6Jt5OTo504Jrr+RnA==
+wskcalendar@1.0.0-beta.11:
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/wskcalendar/-/wskcalendar-1.0.0-beta.11.tgz#7f13226640f7d189f78aac4229a40792520b795d"
+  integrity sha512-E/qrSAEwTpvVHGZBf6BSYCgfLn8aSGkk5+f3W7ZnYLa7cnxKeR/TL3zxMdgVFc2+w/ZLqFx+nvvT0dCb4TlyxQ==
   dependencies:
     "@babel/generator" "^7.24.1"
     "@babel/parser" "^7.24.1"
